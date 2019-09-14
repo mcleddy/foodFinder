@@ -1,0 +1,75 @@
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</head>
+<div class="container">
+    <h1>Pick Your Fruits</h1>
+    <div class="ingredientOptions">
+        <div class="col-lg-9">
+            <input type="checkbox" class="fruit" value="Apple"> Apple
+            <input type="checkbox" class="fruit" value="Orange"> Orange
+            <input type="checkbox" class="fruit" value="Lemon"> Lemon
+            <br>
+            <input type="checkbox" class="fruit" value="Grapes"> Grapes
+            <input type="checkbox" class="fruit" value="Tomato"> Tomato
+            <input type="checkbox" class="fruit" value="Banana"> Banana
+            <br>
+            <input type="checkbox" class="fruit" value="Pineapple"> Pineapple
+            <input type="checkbox" class="fruit" value="Avocado"> Avocado
+            <input type="checkbox" class="fruit" value="Pear"> Pear
+            <br>
+            <input type="checkbox" class="fruit" value="Cherries"> Cherries
+            <input type="checkbox" class="fruit" value="Peach"> Peach
+            <input type="checkbox" class="fruit" value="Strawberries"> Strawberries
+            <br>
+            <input type="checkbox" class="fruit" value="Blueberries"> Blueberries
+            <input type="checkbox" class="fruit" value="Blackberries"> Blackberries
+        </div>
+        <p><input type="submit" value="Submit"></p>
+    </div>
+    <div col-9 class="yourIngredients">
+        
+        </form>
+        <h3>Your Ingredients:</h3>
+        <iframe name="result" style="height:100px;width:200px;"></iframe>\
+    </div>
+    <div class="nav" col-lg-18>
+    <p><input type="submit" class="prev" value="Previous"></p>
+    <p><input type="submit" class="next" value="Next"></p>
+</div>
+</div>
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    .fruit{
+        margin:20px;
+    }
+
+    .ingredientOptions {
+        float: left;
+        margin: 50px;
+
+    }
+
+    .yourIngredients {
+        float: right;
+        margin: 50px;
+    }
+
+    .prev{
+        float: left
+    }
+    .next{
+        float: right
+    }
+</style>
