@@ -1,0 +1,52 @@
+
+/*variables*/
+:root{
+    --theme-color--: #801c25;
+}
+/*end of variables*/
+
+body, html{
+    height: 100%;
+}
+
+/*jumbotron*/
+.jumbotron{
+    background-color: var(--theme-color--) !important;
+}
+/*end of jumbotron*/
+
+
+/*navbar*/
+.navbar{
+    background: transparent !important;
+}
+
+nav{
+    border-bottom:1px solid black !important;
+    box-shadow: 5px 3px 5px black;
+}
+
+/*end of navbar*/
+/*view*/
+#view{
+    background-image: url("../img/defult_1.jpg");
+    height:75%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+}
+
+.view .row_up{
+    height: 20vh;
+}
+
+.btn-dark{
+    background-color: var(--theme-color--) !important;
+    border: none !important;
+    width: 261px;
+}
+/*end of view*/
+
+
