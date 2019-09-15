@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77797b9f-bc1d-41e1-9016-940bf9fcebaf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/Cs Files/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Cs Files/recipe.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Cs Files/results.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/code/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-258">
-              <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+            <state relative-caret-position="1680">
+              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -33,7 +30,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-212" />
+            <state relative-caret-position="336">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -47,6 +46,7 @@
       <list>
         <option value="$PROJECT_DIR$/assets/Cs Files/index.css" />
         <option value="$PROJECT_DIR$/code/index.html" />
+        <option value="$PROJECT_DIR$/assets/css/index.css" />
       </list>
     </option>
   </component>
@@ -83,12 +83,6 @@
               <item name="foodFinder" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="foodFinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="foodFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -97,6 +91,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.3" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -128,12 +123,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568510365266</updated>
-      <workItem from="1568510366560" duration="313000" />
+      <workItem from="1568510366560" duration="1254000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="313000" />
+    <option name="totallyTimeSpent" value="1254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -144,7 +139,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32923833" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -171,8 +166,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-258">
-          <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+        <state relative-caret-position="1680">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -181,7 +176,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-212" />
+        <state relative-caret-position="336">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
       </provider>
     </entry>
   </component>
