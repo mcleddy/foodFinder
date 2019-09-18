@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pick Your Meats</h1>
+        <div class="ingredientOptions">
+            <div class="col-lg-9">
+                <input type="checkbox" class="meat" value="Bass">Bass 
+                <input type="checkbox" class="meat" value="BeefFilet"> Beef Filet
+                <input type="checkbox" class="meat" value="Catfish"> Catfish
+                <br>
+                <input type="checkbox" class="meat" value="ChickenBreast"> Chicken Breast
+                <input type="checkbox" class="meat" value="ChickenThighs"> Chicken Thighs
+                <input type="checkbox" class="meat" value="ChickenWings"> Chicken Wings
+                <br>
+                <input type="checkbox" class="meat" value="Cod"> Cod
+                <input type="checkbox" class="meat" value="GroundBeef"> Ground Beef
+                <input type="checkbox" class="meat" value="GroundTurkey"> Ground Turkey
+                <br>
+                <input type="checkbox" class="meat" value="Herring"> Herring
+                <input type="checkbox" class="meat" value="LambChops"> Lamb Chops
+                <input type="checkbox" class="meat" value="Mahi-Mahi"> Mahi-Mahi
+                <br>
+                <input type="checkbox" class="meat" value="PorkChops"> Pork Chops
+                <input type="checkbox" class="meat" value="PorkTenderloin"> Pork Tenderloin
+                <input type="checkbox" class="meat" value="PotRoast"> Pot Roast
+                <br>
+                <input type="checkbox" class="meat" value="Salomon"> Salomon
+                <input type="checkbox" class="meat" value="Sausage"> Sausage
+                <input type="checkbox" class="meat" value="Steak"> Steak
+                <br>
+                <input type="checkbox" class="meat" value="Tilapia"> Tilapia
+                <input type="checkbox" class="meat" value="Trout"> Trout 
+            </div>
+            <p><input type="submit" value="Add Ingredients"></p>
+        </div>
+
+        <div col-9 class="yourIngredients">
+            </form>
+            <h3>Your Ingredients:</h3>
+            <iframe name="result" style="height:100px;width:200px;"></iframe>\
+        </div>
+
+        <p><input type="submit" class="prev" value="Previous"></p>
+        <p><input type="submit" class="next" value="Next"></p>
+
+    </div>
+    <style>
+        
+        input{
+            background-color: aliceblue;
+
+        }
+        iframe{
+            background-color: aliceblue;
+        }
+        body{
+            background-color:;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        .meat {
+            margin: 20px;
+        }
+
+        .ingredientOptions {
+            float: left;
+            margin: 50px;
+
+        }
+
+        .yourIngredients {
+            float: right;
+            margin: 50px;
+        }
+
+        .prev {
+            float: left;
+            margin: 20px;
+        }
+
+        .next {
+            float: right;
+            margin: 20px;
+        }
+    </style>
+</body>
+
+</html>
