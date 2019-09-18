@@ -3,11 +3,12 @@
 $("#search-btn").on("click", function(event) {
     event.preventDefault();
     console.log("I've been clicked!");
+    // This should show the ingredient form with the list of ingredients
     var url = "../code/Ingredient-Form-Fruit.html";
     $(location).attr('href',url);
 
 });
-// This should show the ingredient form with the list of ingredients
+
 // Create click events for for each individual ingredients
     // when an ingredient is clicked from the list, add them to the list of ingredients, add all the ingredients from each form
 // When next button is clicked, move on to next ingredient slide
