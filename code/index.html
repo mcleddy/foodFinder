@@ -82,7 +82,7 @@
             <div class="col-md-4 col my-auto" id="search-container">
                 <!-- <button class="btn btn-dark p-3" id="search-btn">Search your recipe <i class="fas fa-search"></i></button> -->
             </div>
-            <div class="col-md-4 col-2 my-auto"></div>
+            <div class="col-md-4 col-2 my-auto" id="slide-show"></div>
         </div>
     </div>
 </div>
@@ -110,10 +110,9 @@ $(document).ready(function(){
 
     var slideDiv = $("<div>");
     slideDiv.addClass("slide");
-    var image = $("<img src='../assets/images/fajitas.jpeg'>");
-    image.addClass("image");
-    slideDiv.append(image);
-    $("#search-container").append(image);
+     // Showing another page within a page
+    slideDiv.append($("<iframe height='100%' width='100%' src='../code/Ingredient-Form-Fruit.html' name='iframe_a'></iframe>"));
+    $("#slide-show").append(slideDiv);
 
 });
 });
