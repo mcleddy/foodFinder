@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Create onclick event for search your recipe button
 
 $("#search-btn").on("click", function(event) {
@@ -16,3 +17,30 @@ $("#search-btn").on("click", function(event) {
 // response should show up in the results page, with the recipe cards
 // create click event for the recipe
     // when recipe is clicked show all the recipe's information
+=======
+var queryURL = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=$" + appId + "&app_key=$" + api_key + "&from=0&to=5";
+
+var api_key = "bd3f05a4afcbd7d5d08c20e7058187df";
+
+var appId = "1388115a";
+
+var searchTerm = "chicken"
+
+
+
+console.log("1");
+$(document).ready(function () {
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+
+    
+    }).then(function (response) {
+        console.log(response)
+
+
+    });
+
+    
+    });
+>>>>>>> 5707b202fd9834bd47227db448a309ef4dc5a89e
