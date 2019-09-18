@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pick Your Vegetables and Herbs</h1>
+        <div class="ingredientOptions">
+            <div class="col-lg-9">
+                <input type="checkbox" class="vegetable" value="Artichoke">Artichoke 
+                <input type="checkbox" class="vegetable" value="Arugula"> Arugula
+                <input type="checkbox" class="vegetable" value="Basil"> Basil
+                <br>
+                <input type="checkbox" class="vegetable" value="Beans-Black"> Beans-Black
+                <input type="checkbox" class="vegetable" value="Beans-Kidney"> Beans-Kidney
+                <input type="checkbox" class="vegetable" value="Beans-Lima"> Beans-Lima
+                <br>
+                <input type="checkbox" class="vegetable" value="Beans-Pinto"> Beans-Pinto
+                <input type="checkbox" class="vegetable" value="Broccoli">Broccoli 
+                <input type="checkbox" class="vegetable" value="BrusselSprout"> Brussel Sprout
+                <br>
+                <input type="checkbox" class="vegetable" value="Cabbage"> Cabbage
+                <input type="checkbox" class="vegetable" value="Carrots"> Carrots
+                <input type="checkbox" class="vegetable" value="Cauliflower"> Cauliflower
+                <br>
+                <input type="checkbox" class="vegetable" value="Celery"> Celery
+                <input type="checkbox" class="vegetable" value="Chard">Chard 
+                <input type="checkbox" class="vegetable" value="Collards"> Collards
+                <br>
+                <input type="checkbox" class="vegetable" value="Cucumber"> Cucumber
+                <input type="checkbox" class="vegetable" value="Dill"> Dill
+                <input type="checkbox" class="vegetable" value="Eggplant"> Eggplant
+                <br>
+                <input type="checkbox" class="vegetable" value="Fennel"> Fennel
+                <input type="checkbox" class="vegetable" value="Garlic"> Garlic
+                <input type="checkbox" class="vegetable" value="Ginger"> Ginger
+                <br>
+                <input type="checkbox" class="vegetable" value="Kale"> Kale
+                <input type="checkbox" class="vegetable" value="Lettuce"> Lettuce
+                <input type="checkbox" class="vegetable" value="Okra"> Okra
+                <br>
+                <input type="checkbox" class="vegetable" value="Onion-Green"> Onion-Green
+                <input type="checkbox" class="vegetable" value="Onion-Red"> Onion-Red
+                <input type="checkbox" class="vegetable" value="Onion-White"> Onion-White
+                <br>
+                <input type="checkbox" class="vegetable" value="Oregano">Oregano
+                <input type="checkbox" class="vegetable" value="Parsley"> Parsely
+                <input type="checkbox" class="vegetable" value="Peas"> Peas
+                <br>
+                <input type="checkbox" class="vegetable" value="Pepper-Anaheim"> Pepper-Anaheim
+                <input type="checkbox" class="vegetable" value="Pepper-Bell"> Pepper-Bell
+                <input type="checkbox" class="vegetable" value="Pepper-Habanero">Pepper-Habanero 
+                <br>
+                <input type="checkbox" class="vegetable" value="Pepper-Jalapeno"> Pepper-Jalapeno
+                <input type="checkbox" class="vegetable" value="Pepper-Poblano">Pepper-Poblano 
+                <input type="checkbox" class="vegetable" value="Potato-Red">Potato-Red 
+                <br>
+                <input type="checkbox" class="vegetable" value="Potato-Sweet"> Potato-Sweet
+                <input type="checkbox" class="vegetable" value="Potato-White"> Potato-White
+                <input type="checkbox" class="vegetable" value="Radishes">Radishes 
+                <br>
+                <input type="checkbox" class="vegetable" value="Rosemary">Rosemary
+                <input type="checkbox" class="vegetable" value="Spinach"> Spinach
+                <input type="checkbox" class="vegetable" value="Squash"> Squash
+                <br>
+                <input type="checkbox" class="vegetable" value="Thyme"> Thyme
+                <input type="checkbox" class="vegetable" value="Tomato">Tomato 
+                <input type="checkbox" class="vegetable" value="Zucchini"> Zucchini
+            </div>
+            <p><input type="submit" value="Add Ingredients"></p>
+        </div>
+
+        <div col-9 class="yourIngredients">
+            </form>
+            <h3>Your Ingredients:</h3>
+            <iframe name="result" style="height:100px;width:200px;"></iframe>\
+        </div>
+
+        <p><input type="submit" class="prev" value="Previous"></p>
+        <p><input type="submit" class="next" value="Next"></p>
+
+    </div>
+    <style>
+        
+        input{
+            background-color: aliceblue;
+
+        }
+        iframe{
+            background-color: aliceblue;
+        }
+        body{
+            background-color:;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        .vegetable {
+            margin: 20px;
+        }
+
+        .ingredientOptions {
+            float: left;
+            margin: 50px;
+
+        }
+
+        .yourIngredients {
+            float: right;
+            margin: 50px;
+        }
+
+        .prev {
+            float: left;
+            margin: 20px;
+        }
+
+        .next {
+            float: right;
+            margin: 20px;
+        }
+    </style>
+</body>
+
+</html>
