@@ -89,36 +89,6 @@
 <!--end of view-->
 
 <script>
-$(document).ready(function(){
-    // Creating a dynamic button
-    var searchBtn = $("<button>");
-    // Adding classes to button
-    searchBtn.addClass("search-btn btn-dark p-3");
-    // Adding text and appending search icon to button
-    searchBtn.text("Search your recipe ").append($("<span class='fas fa-search'></span>"));
-    // Appending button to container
-    $("#search-container").append(searchBtn);
-    
-    // on click events for the search button
-    $(".search-btn").on("click", function(event) {
-    event.preventDefault();
-    // console.log("I've been clicked!");
-    // var url = "../code/Ingredient-Form-Fruit.html";
-    // $(location).attr('href',url);
-
-    $("#search-container").remove();
-
-    var slideDiv = $("<div>");
-    slideDiv.addClass("slide");
-     // Showing another page within a page
-    slideDiv.append($("<iframe height='100%' width='100%' src='../code/Ingredient-Form-Fruit.html' name='iframe_a'></iframe>"));
-    $("#slide-show").append(slideDiv);
-
-});
-});
-
-
-
 
 </script>
 
