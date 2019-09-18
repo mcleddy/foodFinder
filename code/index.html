@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="../assets/css/index.css">
     <!--fontawsome-->
     <script src="https://kit.fontawesome.com/d1415ff865.js"></script>
+    <!-- Adding link to our js file  -->
+    <script src="app.js"></script>
 
 </head>
 
@@ -81,13 +83,25 @@
         <div class="row row_up">
             <div class="col-md-4 col-2 my-auto"></div>
             <div class="col-md-4 col my-auto">
-                <button class="btn btn-dark p-3">Search your recipe <i class="fas fa-search"></i></button>
+                <button class="btn btn-dark p-3" id="search-btn">Search your recipe <i class="fas fa-search"></i></button>
             </div>
             <div class="col-md-4 col-2 my-auto"></div>
         </div>
     </div>
 </div>
 <!--end of view-->
+
+<script>
+$("#search-btn").on("click", function(event) {
+    event.preventDefault();
+    console.log("I've been clicked!");
+    var url = "../code/Ingredient-Form-Fruit.html";
+    $(location).attr('href',url);
+
+});
+
+
+</script>
 
 
 >>>>>>> 406c808286e32195fd2456d0623fbaa69c09c868
