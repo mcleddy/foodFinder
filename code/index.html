@@ -79,8 +79,8 @@
     <div class="container">
         <div class="row row_up">
             <div class="col-md-4 col-2 my-auto"></div>
-            <div class="col-md-4 col my-auto">
-                <button class="btn btn-dark p-3" id="search-btn">Search your recipe <i class="fas fa-search"></i></button>
+            <div class="col-md-4 col my-auto" id="search-container">
+                <!-- <button class="btn btn-dark p-3" id="search-btn">Search your recipe <i class="fas fa-search"></i></button> -->
             </div>
             <div class="col-md-4 col-2 my-auto"></div>
         </div>
@@ -89,13 +89,36 @@
 <!--end of view-->
 
 <script>
-$("#search-btn").on("click", function(event) {
+$(document).ready(function(){
+    // Creating a dynamic button
+    var searchBtn = $("<button>");
+    // Adding classes to button
+    searchBtn.addClass("search-btn btn-dark p-3");
+    // Adding text and appending search icon to button
+    searchBtn.text("Search your recipe ").append($("<span class='fas fa-search'></span>"));
+    // Appending button to container
+    $("#search-container").append(searchBtn);
+    
+    // on click events for the search button
+    $(".search-btn").on("click", function(event) {
     event.preventDefault();
-    console.log("I've been clicked!");
-    var url = "../code/Ingredient-Form-Fruit.html";
-    $(location).attr('href',url);
+    // console.log("I've been clicked!");
+    // var url = "../code/Ingredient-Form-Fruit.html";
+    // $(location).attr('href',url);
+
+    $("#search-container").remove();
+
+    var slideDiv = $("<div>");
+    slideDiv.addClass("slide");
+    var image = $("<img src='../assets/images/fajitas.jpeg'>");
+    image.addClass("image");
+    slideDiv.append(image);
+    $("#search-container").append(image);
 
 });
+});
+
+
 
 
 </script>
