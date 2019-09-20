@@ -1,4 +1,14 @@
 $(document).ready(function () {
+    ////////////////////////////////////////////////
+
+    // VARIABLES //
+
+    ////////////////////////////////////////////////
+
+    // Array that should hold all our checklist items
+    var ingredientArray = [];
+    // div to put the slideshow in
+    var slideDiv;
     // Creating a dynamic button
     var searchBtn = $("<button>");
     // Adding classes to button
@@ -18,7 +28,7 @@ $(document).ready(function () {
         // Removing button once it's been clicked on
         $("#search-container").remove();
         // Creating new div to put the slideshow in
-        var slideDiv = $("<div>");
+        slideDiv = $("<div>");
         // Adding class to new div
         slideDiv.addClass("slide");
         // Showing our ingredient page within our page once the button has been clicked
@@ -32,35 +42,55 @@ $(document).ready(function () {
 
     $(".next").on("click", function (event) {
         event.preventDefault();
-        console.log("I've been clicked!");
+        console.log("Next!");
 
     });
     // When previous button is clicked, move to previous slide of ingredients
     // Go the opposite way for previous button
     $(".prev").on("click", function (event) {
         event.preventDefault();
-        console.log("I've been clicked!");
+        console.log("Previous!");
 
     });
 
     // Create click events for for each individual ingredients
-    $(":checkbox").on("click", function (){
+    $(":checkbox").on("click", function () {
         console.log("I've been checked!");
-         // when an ingredient is clicked from the list, add them to the list of ingredients, add all the ingredients from each form
+        // Collect text from the checkbox item
+        // var ingredientValue = $(":checkbox").val();
+        // console.log($(":checkbox").val());
+        // console.log( $("input:checked").val()+" is checked!")
+        ingredientArray.push();
+        
+        // when an ingredient is clicked from the list, add them to the list of ingredients, add all the ingredients from each form
 
-        // Create new div with the ingredient to be placed in the list of ingredients
-         var ingredientItem = $("<p>");
-        //  Text should be text from the ingredient button
-         ingredientItem.text("cat")
-        //  Create a remove button for each ingredient
-         var ingredientRemove = $("<button>");
-         ingredientRemove.addClass("ckeckbox");
-         ingredientRemove.text("-");
-         ingredientItem.prepend(ingredientRemove);
-
-         $("#ingredient-list-result").append(ingredientItem);
-
+        // Add text from checkbox item into the ingredient array
     });
+
+    $("#add-ingredient").on("click", function () {
+        // Create for loop for each item in ingredient array to show on the ingredient list with a remove button available 
+        console.log("Add me");
+        ;
+        $.each($("input[name='food']:checked")), function(){ingredients.push($(this).val())}
+        // Create new div with the ingredient to be placed in the list of ingredients
+        var ingredientItem = $("<p>");
+        //  Text should be text from the ingredient button
+        ingredientItem.text("")
+        //  Create a remove button for each ingredient
+        var ingredientRemove = $("<button>");
+        ingredientRemove.addClass("ckeckbox");
+        ingredientRemove.text("-");
+        ingredientItem.prepend(ingredientRemove);
+
+        $("#ingredient-list-result").append(ingredientItem);
+
+    })
+    /////////////////////////////////////////////////////////
+
+    // AJAX CALL //
+
+    /////////////////////////////////////////////////////////
+
     // When submit button is clicked, run ajax call that gathers up all the ingredients in the list of ingredients
     var queryURL = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=$" + appId + "&app_key=$" + api_key + "&from=0&to=5";
 
