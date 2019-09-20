@@ -39,17 +39,17 @@ $(document).ready(function () {
     });
     // When next button is clicked, move on to next ingredient slide
     // Create for loop that allows us to loop through each ingredient list starting at slideshow-index=0 every time we click on next
-    var slideShow = ["../code/Ingredient-Form-Fruit.html", "../code/Ingredient-Form-Dairy.html","../code/Ingredient-Form-Baking-and-Spices.html","../code/Ingredient-Form-Meat.html","../code/Ingredient-Form-Vegetables.html"];
+    var slideShow = ["../code/Ingredient-Form-Grains.html", "../code/Ingredient-Form-Fruit.html", "../code/Ingredient-Form-Dairy.html","../code/Ingredient-Form-Baking-and-Spices.html","../code/Ingredient-Form-Meat.html","../code/Ingredient-Form-Vegetables.html"];
     
+    var slideIndex=0; 
+
     $(".next").on("click", function (event) {
         event.preventDefault();
         console.log("Next!");
-        var slideIndex=0; 
-        for (i=0; i<slideShow.length; i++){
-            slideIndex++;
-            console.log(slideShow[slideIndex]);
-        }
-
+        if (slideIndex<5){slideIndex++}
+        else{slideShow[5]};
+        console.log(slideShow[slideIndex]);
+    
     });
     // When previous button is clicked, move to previous slide of ingredients
     // Go the opposite way for previous button
