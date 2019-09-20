@@ -2,113 +2,136 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous"></script>
-
-</head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>    
 
 <body>
-    <div class="container">
-        <h1>Pick Your Vegetables and Herbs</h1>
-        <div class="ingredientOptions">
-            <div class="col-6">
-            <div class="item"> <input type="checkbox" class="vegetable" value="Artichoke">Artichoke</div>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Arugula"> Arugula</div>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Basil"> Basil</div>
-            <br>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Beans-Black"> Beans-Black</div>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Beans-Kidney"> Beans-Kidney</div>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Beans-Lima"> Beans-Lima</div>
-            <br>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Beans-Pinto"> Beans-Pinto</div>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Broccoli">Broccoli </div>
-            <div class="item"> <input type="checkbox" class="vegetable" value="BrusselSprout"> Brussel Sprout</div>
-            <br>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Cabbage"> Cabbage</div>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Carrots"> Carrots</div>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Cauliflower"> Cauliflower</div>
-            <br>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Celery"> Celery</div>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Chard">Chard </div>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Collards"> Collards</div>
-            <br>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Cucumber"> Cucumber</div>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Dill"> Dill</div>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Eggplant"> Eggplant</div>
-            <br>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Fennel"> Fennel</div>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Garlic"> Garlic</div>
-            <div class="item"> <input type="checkbox" class="vegetable" value="Ginger"> Ginger</div>
-            <br>
+    <h1>Pick Your Vegetables and Herbs</h1>
+    <div class="ingredientOptions">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="item"> <input type="checkbox" class="vegetable" value="Artichoke">Artichoke</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Arugula"> Arugula</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Basil"> Basil</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Beans-Black"> Beans-Black</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Beans-Kidney"> Beans-Kidney</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Beans-Lima"> Beans-Lima</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Beans-Pinto"> Beans-Pinto</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Broccoli">Broccoli </div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="BrusselSprout"> Brussel Sprout
+                </div>
+                <br>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Cabbage"> Cabbage</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Carrots"> Carrots</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Cauliflower"> Cauliflower</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Celery"> Celery</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Chard">Chard </div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Collards"> Collards</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Cucumber"> Cucumber</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Dill"> Dill</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Eggplant"> Eggplant</div>
+                <br>
+
+                <div class="item"> <input type="checkbox" class="vegetable" value="Fennel"> Fennel</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Garlic"> Garlic</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Ginger"> Ginger</div>
+                <br>
+
+                <div class="item"> <input type="checkbox" class="vegetable" value="Kale"> Kale</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Lettuce"> Lettuce</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Okra"> Okra</div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="item"> <input type="checkbox" class="vegetable" value="Onion-Green"> Onion-Green</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Onion-Red"> Onion-Red</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Onion-White"> Onion-White</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Oregano">Oregano</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Parsley"> Parsely</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Peas"> Peas</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Pepper-Anaheim"> Pepper-Anaheim
+                </div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Pepper-Bell"> Pepper-Bell</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Pepper-Habanero">Pepper-Habanero
+                </div>
+                <br>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Pepper-Jalapeno"> Pepper-Jalapeno
+                </div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Pepper-Poblano">Pepper-Poblano
+                </div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Potato-Red">Potato-Red </div>
+                <br>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Potato-Sweet"> Potato-Sweet</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Potato-White"> Potato-White</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Radishes">Radishes </div>
+                <br>
+                <div class="item"><input type="checkbox" class="vegetable" value="Rosemary">Rosemary</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Spinach"> Spinach</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Squash"> Squash</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Thyme"> Thyme</div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Tomato">Tomato </div>
+                <div class="item"> <input type="checkbox" class="vegetable" value="Zucchini"> Zucchini </div>
+            </div>
         </div>
-        <div class="col-12">
-        <div class="item"> <input type="checkbox" class="vegetable" value="Kale"> Kale</div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Lettuce"> Lettuce</div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Okra"> Okra</div>
-        <br>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Onion-Green"> Onion-Green</div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Onion-Red"> Onion-Red</div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Onion-White"> Onion-White</div>
-        <br>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Oregano">Oregano</div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Parsley"> Parsely</div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Peas"> Peas</div>
-        <br>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Pepper-Anaheim"> Pepper-Anaheim</div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Pepper-Bell"> Pepper-Bell</div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Pepper-Habanero">Pepper-Habanero</div>
-        <br>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Pepper-Jalapeno"> Pepper-Jalapeno</div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Pepper-Poblano">Pepper-Poblano </div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Potato-Red">Potato-Red </div>
-        <br>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Potato-Sweet"> Potato-Sweet</div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Potato-White"> Potato-White</div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Radishes">Radishes </div>
-        <br>
-        <div class="item"><input type="checkbox" class="vegetable" value="Rosemary">Rosemary</div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Spinach"> Spinach</div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Squash"> Squash</div>
-        <br>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Thyme"> Thyme</div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Tomato">Tomato </div>
-        <div class="item"> <input type="checkbox" class="vegetable" value="Zucchini"> Zucchini </div>
-        <div class="addIngredients"><input type="submit" value="Add Ingredients"></div>
+        <input type="submit" class="add" value="Add Ingredients">
+    </div>
+    
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="yourIngredients">
+                </form>
+                <h3>Your Ingredients:</h3>
+                <iframe name="result" style="height:200px;width:400px;"></iframe>
+                <input type="submit" class="prev" value="Previous">
+                <input type="submit" class="next" value="Next">
+            </div>
         </div>
-    </div>
-    </div>
-
-    <div col-9 class="yourIngredients">
-        </form>
-        <h3>Your Ingredients:</h3>
-        <iframe name="result" style="height:200px;width:400px;"></iframe>\
-    </div>
-
-    <p><input type="submit" class="prev" value="Previous"></p>
-    <p><input type="submit" class="next" value="Next"></p>
-
     </div>
     <style>
-       
-        
+        .add {
+            -webkit-text-stroke: 1px black;
+            color: rgb(61, 2, 55);
+            border-style: solid;
+            border-color: black;
+            margin-left: 400px;
+
+        }
+
         h3 {
             background-color: aliceblue;
             padding: 5px;
-            width: 150px;
+            width: 250px;
             text-align: center;
             border-style: solid;
             border-color: black;
@@ -138,7 +161,7 @@
         h1 {
             text-align: center;
             -webkit-text-stroke: 1px black;
-            margin: 50px;
+            margin: 70px;
             color: rgb(61, 2, 55);
             background-color: aliceblue;
             border-style: double;
@@ -167,25 +190,25 @@
             float: right;
             margin: 50px;
             -webkit-text-stroke: 1px black;
-            margin: 50px;
             color: rgb(61, 2, 55);
+            width: 400px;
         }
 
         .prev {
+            margin-top: 10px;
             float: left;
             margin: 20px;
             -webkit-text-stroke: 1px black;
-            margin: 50px;
             color: rgb(61, 2, 55);
             border-style: solid;
             border-color: black;
         }
 
         .next {
+            height: 30px;
             float: right;
             margin: 20px;
             -webkit-text-stroke: 1px black;
-            margin: 50px;
             color: rgb(61, 2, 55);
             border-style: solid;
             border-color: black;
