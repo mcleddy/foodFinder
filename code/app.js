@@ -54,7 +54,7 @@ $(document).ready(function () {
     });
 
     // Create click events for for each individual ingredients
-    $("input").on("click", function () {
+    $(":checkbox").on("click", function () {
         console.log("I've been checked!");
         // Collect text from the checkbox item
         // var ingredientValue = $(":checkbox").val();
