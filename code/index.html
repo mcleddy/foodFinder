@@ -12,6 +12,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
+    <!-- Linking full jquery for ajax purposes -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
@@ -19,8 +21,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
         </script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
     <!-- Adding link to our own javascript and css -->
@@ -33,22 +35,19 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-    <script src="app.js"></script>
-=======
-<!--jumbotron-->
-<div class="jumbotron jumbotron-fluid m-0 pt-6 pb-3 text-white">
-    <div class="container">
-        <h1 class="display-4">Food Recipe</h1>
-        <p class="lead">We offer many health food recipes, can't wait? start your search now!.</p>
+    <!--jumbotron-->
+    <div class="jumbotron jumbotron-fluid m-0 pt-6 pb-3 text-white">
+        <div class="container">
+            <h1 class="display-4">Food Recipe</h1>
+            <p class="lead">We offer many health food recipes, can't wait? start your search now!.</p>
+        </div>
     </div>
-</div>
-<!--end of jumbotron-->
+    <!--end of jumbotron-->
 
 
-<header>
-    <!--nev bar-->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top ">
+    <header>
+        <!--nev bar-->
+        <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top ">
         <a class="navbar-brand" href="#">
             <img src="../assets/img/logo.jpg" style="width:40px;">
         </a>
@@ -72,39 +71,30 @@
                 </li>
             </ul>
         </div>
-    </nav>
-    <!--end of nav bar-->
-    <!--head-->
-</header>
-<!--end of head-->
-<!--view-->
-<div class="view" id="view">
-    <div class="container">
-        <div class="row row_up">
-            <div class="col-md-4 col-2 my-auto"></div>
-            <div class="col-md-4 col my-auto">
-                <button class="btn btn-dark p-3" id="search-btn">Search your recipe <i class="fas fa-search"></i></button>
+    </nav> -->
+        <!--end of nav bar-->
+        <!--head-->
+    </header>
+    <!--end of head-->
+    <!--view-->
+    <div class="view" id="view">
+        <div class="container">
+            <div class="row row_up">
+                <div class="col-md-4 col-2 my-auto"></div>
+                <div class="col-md-4 col my-auto" id="search-container">
+                    <!-- <button class="btn btn-dark p-3" id="search-btn">Search your recipe <i class="fas fa-search"></i></button> -->
+                </div>
+                <div class="col-md-4 col-2 my-auto" id="slide-show"></div>
             </div>
-            <div class="col-md-4 col-2 my-auto"></div>
         </div>
     </div>
-</div>
-<!--end of view-->
+    <!--end of view-->
 
-<script>
-$("#search-btn").on("click", function(event) {
-    event.preventDefault();
-    console.log("I've been clicked!");
-    var url = "../code/Ingredient-Form-Fruit.html";
-    $(location).attr('href',url);
+    <script>
 
-});
+    </script>
 
 
-</script>
-
-
->>>>>>> 406c808286e32195fd2456d0623fbaa69c09c868
 
 
 </body>
