@@ -32,17 +32,23 @@ $(document).ready(function () {
         // Adding class to new div
         slideDiv.addClass("slide");
         // Showing our ingredient page within our page once the button has been clicked
-        slideDiv.append($("<iframe height='100%' width='100%' src='../code/Ingredient-Form-Fruit.html' name='iframe_a'></iframe>"));
+        slideDiv.append($("<iframe width='100%' height='500px' src='../code/Ingredient-Form-Grains.html' name='iframe_a'></iframe>"));
         // Appending our new div to the slide-show div
         $("#slide-show").append(slideDiv);
 
     });
     // When next button is clicked, move on to next ingredient slide
     // Create for loop that allows us to loop through each ingredient list starting at slideshow-index=0 every time we click on next
-
+    var slideShow = ["../code/Ingredient-Form-Fruit.html", "../code/Ingredient-Form-Dairy.html","../code/Ingredient-Form-Baking-and-Spices.html","../code/Ingredient-Form-Meat.html","../code/Ingredient-Form-Vegetables.html"];
+    
     $(".next").on("click", function (event) {
         event.preventDefault();
         console.log("Next!");
+        var slideIndex=0; 
+        for (i=0; i<slideShow.length; i++){
+            slideIndex++;
+            console.log(slideShow[slideIndex]);
+        }
 
     });
     // When previous button is clicked, move to previous slide of ingredients
@@ -58,8 +64,10 @@ $(document).ready(function () {
         console.log("I've been checked!");
         // Collect text from the checkbox item
         // var ingredientValue = $(":checkbox").val();
-        // console.log($(":checkbox").val());
-        // console.log( $("input:checked").val()+" is checked!")
+        console.log($(":checkbox").val());
+        console.log( $("input:checked").val()+" is checked!")
+
+        $.each($("input[name='food']:checked")), function(){ingredients.push($(this).val())}
         ingredientArray.push();
         
         // when an ingredient is clicked from the list, add them to the list of ingredients, add all the ingredients from each form
@@ -70,8 +78,7 @@ $(document).ready(function () {
     $("#add-ingredient").on("click", function () {
         // Create for loop for each item in ingredient array to show on the ingredient list with a remove button available 
         console.log("Add me");
-        ;
-        $.each($("input[name='food']:checked")), function(){ingredients.push($(this).val())}
+        
         // Create new div with the ingredient to be placed in the list of ingredients
         var ingredientItem = $("<p>");
         //  Text should be text from the ingredient button
