@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <h1>Pick Your Baking Ingredients and Spices</h1>
+    <div class="ingredientOptions container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="item"><input type="checkbox" class="bakingandspices" value="BakingPowder">Baking Powder
+                </div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="BakingSoda"> Baking Soda</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="CayennePepper"> Cayenne Pepper
+                </div>
+                <br>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="ChiliPowder"> Chili Powder
+                </div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="ChocolateMorsels"> Chocolate
+                    Morsels</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Cinnamon"> Cinnamon</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Clove"> Clove</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Cornmeal"> Cornmeal</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Cornstarch"> Cornstarch</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Flour"> Flour</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="GarlicPowder"> Garlic Powder
+                </div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Honey"> Honey</div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Nutmeg"> Nutmeg</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Oil-Canola"> Oil-Canola</div>
+                <div class="item"><input type="checkbox" class="bakingandspices" value="Oil-Olive">Oil-Olive</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Oil-Vegetable"> Oil-Vegetable
+                </div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="OnionPowder"> Onion Powder
+                </div>
+                <div class="item"><input type="checkbox" class="bakingandspices" value="Paprika"> Paprika</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Pepper"> Pepper</div>
+                <div class="item"><input type="checkbox" class="bakingandspices" value="Salt"> Salt</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Shortening"> Shortening</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Sugar-Brown"> Sugar-Brown</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Sugar-White"> Sugar-White</div>
+                <div class="item"><input type="checkbox" class="bakingandspices" value="Vanilla"> Vanilla</div>
+
+            </div>
+            <div class="add"><input type="submit" value="Add Ingredients"></div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="yourIngredients">
+                </form>
+                <h3>Your Ingredients:</h3>
+                <iframe name="result" style="height:200px;width:400px;"></iframe>
+                <input type="submit" class="prev" value="Previous">
+                <input type="submit" class="next" value="Next">
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .add {
+            -webkit-text-stroke: 1px black;
+            color: rgb(61, 2, 55);
+            border-style: solid;
+            border-color: black;
+            margin-left: 400px;
+            margin-top: 20px;
+
+        }
+
+        h3 {
+            background-color: aliceblue;
+            padding: 5px;
+            width: 250px;
+            text-align: center;
+            border-style: solid;
+            border-color: black;
+        }
+
+        input {
+            background-color: aliceblue;
+
+        }
+
+        iframe {
+            background-color: aliceblue;
+            border-style: solid;
+        }
+
+        body {
+            background-image: url("assets/images/Project1-background.jpg");
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            -webkit-text-stroke: 1px black;
+            margin: 70px;
+            color: rgb(61, 2, 55);
+            background-color: aliceblue;
+            border-style: double;
+            border-color: black;
+            width: 500px;
+            padding: 20px;
+            border-width: thick;
+        }
+
+        .item {
+            margin: 5px;
+            background-color: aliceblue;
+            padding: 5px;
+            width: 200px;
+            border-style: solid;
+        }
+
+        .ingredientOptions {
+            -webkit-text-stroke: 1px black;
+            float: left;
+            margin: 50px;
+            color: rgb(61, 2, 55);
+        }
+
+        .yourIngredients {
+            float: right;
+            margin: 50px;
+            -webkit-text-stroke: 1px black;
+            color: rgb(61, 2, 55);
+            width: 400px;
+        }
+
+        .prev {
+            margin-top: 10px;
+            float: left;
+            margin: 20px;
+            -webkit-text-stroke: 1px black;
+            color: rgb(61, 2, 55);
+            border-style: solid;
+            border-color: black;
+        }
+
+        .next {
+            height: 30px;
+            float: right;
+            margin: 20px;
+            -webkit-text-stroke: 1px black;
+            color: rgb(61, 2, 55);
+            border-style: solid;
+            border-color: black;
+        }
+
+    </style>
+</body>
+
+</html>

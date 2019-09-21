@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Adding link to Bootstrap javascript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
     <!-- Linking full jquery for ajax -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -26,7 +26,7 @@
 
 
     <!-- Adding link to our own javascript and css -->
-    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <!--fontawsome-->
     <script src="https://kit.fontawesome.com/d1415ff865.js"></script>
     <!-- Adding link to our js file  -->
@@ -36,11 +36,16 @@
 
 <body>
     <!--jumbotron-->
-    <div class="jumbotron jumbotron-fluid m-0 pt-6 pb-3 text-white">
+    <div class="jumbotron jumbotron-fluid m-0  pb-3 text-white">
         <div class="container">
+
             <h1 class="display-4">Food Finder</h1>
             <p class="lead">Find easy to make recipes! Or search by ingredient to find tailored recipes.</p>
         </div>
+
+            <h1 class="display-4">Food Recipe</h1>
+           </div>
+
     </div>
     <!--end of jumbotron-->
 
@@ -79,7 +84,11 @@
     <!--view-->
     <div class="view" id="view">
         <div class="container">
+<<<<<<< HEAD:code/index.html
           
+=======
+
+>>>>>>> 51549ed72f870481735e743f4ed1087c5c2ea327:index.html
             <div id="slide-show"></div>
             <div id="buttons"></div>
             <div class="row row_up">
@@ -100,17 +109,45 @@
 
             </div>
 
+
+            <!-- <div class="row row_up"> -->
+            <!-- <div class="col-md-4 col-2 my-auto"></div> -->
+            <div id="search-container">
+                <!-- <button class="btn btn-dark p-3" id="search-btn">Search your recipe <i class="fas fa-search"></i></button> -->
+            </div>
+            <div id="slide-show"></div>
+
         </div>
+    </div>
     </div>
     <!--end of view-->
 
     <script>
 
     </script>
+    <style>
+        .jumbotron{
+        height: 20%;
+        padding:20px;
+        }
 
+        .container{
+            padding: 0%;
+            margin: 0%;
+        }
 
-
-
+        h1 {
+            text-align: center;
+            -webkit-text-stroke: 1px black;
+            margin-left:50px;
+            color: rgb(61, 2, 55);
+            background-color: aliceblue;
+            border-style: double;
+            border-color: black;
+            border-width: thick;
+        }
+    
+    </style>
 </body>
 
 </html>

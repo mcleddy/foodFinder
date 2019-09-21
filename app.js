@@ -58,7 +58,7 @@ $(document).ready(function () {
         // Creating new div to put the slideshow in
         slideDiv = $("<div>");
         // Adding class to new div
-        slideDiv.addClass("slide");
+      //  slideDiv.addClass("slide");
         // Showing our ingredient page within our page once the button has been clicked
         createNextandPrev()
         slideShowFunction();
@@ -107,7 +107,7 @@ $(document).ready(function () {
     }
     // When next button is clicked, move on to next ingredient slide
     // Create for loop that allows us to loop through each ingredient list starting at slideshow-index=0 every time we click on next
-    var slideShow = ["../code/Ingredient-Form-Grains.html", "../code/Ingredient-Form-Fruit.html", "../code/Ingredient-Form-Dairy.html", "../code/Ingredient-Form-Baking-and-Spices.html", "../code/Ingredient-Form-Meat.html", "../code/Ingredient-Form-Vegetables.html"];
+    var slideShow = ["Ingredient-Form-Grains.html", "Ingredient-Form-Fruit.html", "Ingredient-Form-Dairy.html", "Ingredient-Form-Baking-and-Spices.html", "Ingredient-Form-Meat.html", "Ingredient-Form-Vegetables.html"];
 
     var slideIndex = 0;
 
@@ -152,7 +152,19 @@ $(document).ready(function () {
     /////////////////////////////////////////////////////////
 
     // When submit button is clicked, run ajax call that gathers up all the ingredients in the list of ingredients
-    var queryURL = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=$" + appId + "&app_key=$" + api_key + "&from=0&to=5";
+
+
+    var api_key = "bd3f05a4afcbd7d5d08c20e7058187df";
+
+    var appId = "1388115a";
+
+    var searchTerm = "chicken"
+
+    
+    var queryURL = "https://api.edamam.com/search?q=" +searchTerm+ "&app_id=" + appId + "&app_key=" + api_key + "&from=0&to=5";
+
+    console.log(queryURL);
+
 
     var api_key = "bd3f05a4afcbd7d5d08c20e7058187df";
 
