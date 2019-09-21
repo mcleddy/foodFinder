@@ -30,9 +30,9 @@ $(document).ready(function () {
         // Creating new div to put the slideshow in
         slideDiv = $("<div>");
         // Adding class to new div
-        slideDiv.addClass("slide");
+      //  slideDiv.addClass("slide");
         // Showing our ingredient page within our page once the button has been clicked
-        slideDiv.append($("<iframe width='100%' height='500px' src='../code/Ingredient-Form-Grains.html' name='iframe_a'></iframe>"));
+        slideDiv.append($("<iframe width='1520' height='610' src='../code/Ingredient-Form-Grains.html' name='iframe_a'></iframe>"));
         // Appending our new div to the slide-show div
         $("#slide-show").append(slideDiv);
 
