@@ -21,7 +21,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
         </script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
@@ -38,8 +38,8 @@
     <!--jumbotron-->
     <div class="jumbotron jumbotron-fluid m-0 pt-6 pb-3 text-white">
         <div class="container">
-            <h1 class="display-4">Food Recipe</h1>
-            <p class="lead">We offer many health food recipes, can't wait? start your search now!.</p>
+            <h1 class="display-4">Food Finder</h1>
+            <p class="lead">Find easy to make recipes! Or search by ingredient to find tailored recipes.</p>
         </div>
     </div>
     <!--end of jumbotron-->
@@ -79,13 +79,25 @@
     <!--view-->
     <div class="view" id="view">
         <div class="container">
-            <!-- <div class="row row_up"> -->
+            <div id="slide-show"></div>
+            <div class="row row_up">
                 <!-- <div class="col-md-4 col-2 my-auto"></div> -->
-                <div id="search-container">
+                <div class="col-6" id="search-container">
                     <!-- <button class="btn btn-dark p-3" id="search-btn">Search your recipe <i class="fas fa-search"></i></button> -->
                 </div>
-                <div id="slide-show"></div>
+                <div class="col-6" id="search-bar">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search for a recipe"
+                            aria-label="Search for a recipe" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button id="recipe-btn" class="btn btn-dark" type="submit" id="button-addon2">Search</button>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
+
         </div>
     </div>
     <!--end of view-->

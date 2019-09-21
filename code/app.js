@@ -9,14 +9,25 @@ $(document).ready(function () {
     var ingredientArray = [];
     // div to put the slideshow in
     var slideDiv;
+
+    /////////////////////////////////////////////////
+
+    // FUNCTIONS //
+
+    /////////////////////////////////////////////////
+
+    createBtn();
+
+    function createBtn(){
     // Creating a dynamic button
     var searchBtn = $("<button>");
     // Adding classes to button
     searchBtn.addClass("search-btn btn-dark p-3");
     // Adding text and appending search icon to button
-    searchBtn.text("Search your recipe ").append($("<span class='fas fa-search'></span>"));
+    searchBtn.text("Search by ingredient ").append($("<span class='fas fa-search'></span>"));
     // Appending button to container
     $("#search-container").append(searchBtn);
+    }
 
     // on click events for the search button
     $(".search-btn").on("click", function (event) {
@@ -27,6 +38,7 @@ $(document).ready(function () {
 
         // Removing button once it's been clicked on
         $("#search-container").remove();
+        $("#search-bar").remove();
         // Creating new div to put the slideshow in
         slideDiv = $("<div>");
         // Adding class to new div
@@ -35,6 +47,21 @@ $(document).ready(function () {
         slideShowFunction();
         // Appending our new div to the slide-show div
 
+    });
+
+
+    $("#recipe-btn").on("click", function (event) {
+        event.preventDefault();
+        // console.log("I've been clicked!");
+        $("#search-container").remove();
+        $("#search-bar").remove();
+
+    });
+    
+    $("#ingredient-btn").on("click", function (event) {
+        event.preventDefault();
+        // console.log("I've been clicked!");
+        $("#ingredient-list-result").append();
     });
 
     function slideShowFunction() {
@@ -49,14 +76,14 @@ $(document).ready(function () {
     $(".next").on("click", function (event) {
         event.preventDefault();
         console.log("Next!");
-        if (slideIndex < 5) { 
-            slideIndex++ 
+        if (slideIndex < 5) {
+            slideIndex++;
         }
-        else { 
-            slideShow[5] 
+        else {
+            slideShow[5]
         };
-        console.log(slideShow[slideIndex]);
-        $("#slide-show").append($("<iframe width='100%' height='500px' src='" + slideShow[slideIndex] + "' name='iframe_a'></iframe>"));
+        console.log(slideShow[slideIndex])
+        slideShowFunction();
     });
     // When previous button is clicked, move to previous slide of ingredients
     // Go the opposite way for previous button
@@ -129,5 +156,5 @@ $(document).ready(function () {
 });
 
 
-// create click event for the recipe
-    // when recipe is clicked show all the recipe's information
+                    // create click event for the recipe
+                        // when recipe is clicked show all the recipe's information

@@ -22,6 +22,16 @@
 <body>
     <div class="container">
         <h1>Pick Your Grains</h1>
+        <div class="col-6" id="ingredient-bar">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter ingredient"
+                        aria-label="Enter ingredient" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button id="ingredient-btn" class="btn btn-dark" type="submit" id="button-addon2">Search</button>
+                    </div>
+                </div>
+
+            </div>
         <div class="ingredientOptions">
             <div class="col-lg-9">
                 <div class="item"> <input type="checkbox" class="grain" value="Bread">Bread </div>
@@ -38,13 +48,13 @@
                 <br>
                 <div class="item"><input type="checkbox" class="grain" value="Spaghetti"> Spaghetti</div>
             </div>
-            <p><input id="add-ingredient" type="submit" value="Add Ingredients"></p>
+            <p><input type="submit" value="Add Ingredients"></p>
         </div>
 
         <div col-9 class="yourIngredients">
             </form>
             <h3>Your Ingredients:</h3>
-            <iframe name="result" style="height:100px;width:200px;" id="ingredient-list-result"></iframe>\
+            <iframe name="result" style="height:100px;width:200px;" id="ingredient-list-result"></iframe>
         </div>
 
         <p><input type="submit" class="prev" value="Previous"></p>
