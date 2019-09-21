@@ -44,11 +44,7 @@ $(document).ready(function () {
         // Adding class to new div
       //  slideDiv.addClass("slide");
         // Showing our ingredient page within our page once the button has been clicked
-<<<<<<< HEAD
-        slideDiv.append($("<iframe width='1520' height='610' src='../code/Ingredient-Form-Grains.html' name='iframe_a'></iframe>"));
-=======
         slideShowFunction();
->>>>>>> 1b47b43df70740f0320243c6947ae2dc658ab970
         // Appending our new div to the slide-show div
 
     });
@@ -69,7 +65,7 @@ $(document).ready(function () {
     });
 
     function slideShowFunction() {
-        $("#slide-show").append($("<iframe width='100%' height='500px' src='" + slideShow[slideIndex] + "' name='iframe_a'></iframe>"));
+        $("#slide-show").append($("<iframe width='1520' height='575' src='" + slideShow[slideIndex] + "' name='iframe_a'></iframe>"));
     }
     // When next button is clicked, move on to next ingredient slide
     // Create for loop that allows us to loop through each ingredient list starting at slideshow-index=0 every time we click on next
