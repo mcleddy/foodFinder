@@ -32,31 +32,41 @@ $(document).ready(function () {
         // Adding class to new div
         slideDiv.addClass("slide");
         // Showing our ingredient page within our page once the button has been clicked
-        slideDiv.append($("<iframe width='100%' height='500px' src='../code/Ingredient-Form-Grains.html' name='iframe_a'></iframe>"));
+        slideShowFunction();
         // Appending our new div to the slide-show div
-        $("#slide-show").append(slideDiv);
 
     });
+
+    function slideShowFunction() {
+        $("#slide-show").append($("<iframe width='100%' height='500px' src='" + slideShow[slideIndex] + "' name='iframe_a'></iframe>"));
+    }
     // When next button is clicked, move on to next ingredient slide
     // Create for loop that allows us to loop through each ingredient list starting at slideshow-index=0 every time we click on next
-    var slideShow = ["../code/Ingredient-Form-Grains.html", "../code/Ingredient-Form-Fruit.html", "../code/Ingredient-Form-Dairy.html","../code/Ingredient-Form-Baking-and-Spices.html","../code/Ingredient-Form-Meat.html","../code/Ingredient-Form-Vegetables.html"];
-    
-    var slideIndex=0; 
+    var slideShow = ["../code/Ingredient-Form-Grains.html", "../code/Ingredient-Form-Fruit.html", "../code/Ingredient-Form-Dairy.html", "../code/Ingredient-Form-Baking-and-Spices.html", "../code/Ingredient-Form-Meat.html", "../code/Ingredient-Form-Vegetables.html"];
+
+    var slideIndex = 0;
 
     $(".next").on("click", function (event) {
         event.preventDefault();
         console.log("Next!");
-        if (slideIndex<5){slideIndex++}
-        else{slideShow[5]};
+        if (slideIndex < 5) { 
+            slideIndex++ 
+        }
+        else { 
+            slideShow[5] 
+        };
         console.log(slideShow[slideIndex]);
-    
+        $("#slide-show").append($("<iframe width='100%' height='500px' src='" + slideShow[slideIndex] + "' name='iframe_a'></iframe>"));
     });
     // When previous button is clicked, move to previous slide of ingredients
     // Go the opposite way for previous button
     $(".prev").on("click", function (event) {
         event.preventDefault();
         console.log("Previous!");
-
+        if (slideIndex > 0) { slideIndex-- }
+        else { slideShow[0] };
+        console.log(slideShow[slideIndex]);
+        slideShowFunction();
     });
 
     // Create click events for for each individual ingredients
@@ -65,11 +75,11 @@ $(document).ready(function () {
         // Collect text from the checkbox item
         // var ingredientValue = $(":checkbox").val();
         console.log($(":checkbox").val());
-        console.log( $("input:checked").val()+" is checked!")
+        console.log($("input:checked").val() + " is checked!")
 
-        $.each($("input[name='food']:checked")), function(){ingredients.push($(this).val())}
+        $.each($("input[name='food']:checked")), function () { ingredients.push($(this).val()) }
         ingredientArray.push();
-        
+
         // when an ingredient is clicked from the list, add them to the list of ingredients, add all the ingredients from each form
 
         // Add text from checkbox item into the ingredient array
@@ -78,7 +88,7 @@ $(document).ready(function () {
     $("#add-ingredient").on("click", function () {
         // Create for loop for each item in ingredient array to show on the ingredient list with a remove button available 
         console.log("Add me");
-        
+
         // Create new div with the ingredient to be placed in the list of ingredients
         var ingredientItem = $("<p>");
         //  Text should be text from the ingredient button
