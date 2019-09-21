@@ -42,9 +42,13 @@ $(document).ready(function () {
         // Creating new div to put the slideshow in
         slideDiv = $("<div>");
         // Adding class to new div
-        slideDiv.addClass("slide");
+      //  slideDiv.addClass("slide");
         // Showing our ingredient page within our page once the button has been clicked
+<<<<<<< HEAD
+        slideDiv.append($("<iframe width='1520' height='610' src='../code/Ingredient-Form-Grains.html' name='iframe_a'></iframe>"));
+=======
         slideShowFunction();
+>>>>>>> 1b47b43df70740f0320243c6947ae2dc658ab970
         // Appending our new div to the slide-show div
 
     });
