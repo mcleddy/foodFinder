@@ -38,8 +38,14 @@
     <!--jumbotron-->
     <div class="jumbotron jumbotron-fluid m-0  pb-3 text-white">
         <div class="container">
+
+            <h1 class="display-4">Food Finder</h1>
+            <p class="lead">Find easy to make recipes! Or search by ingredient to find tailored recipes.</p>
+        </div>
+
             <h1 class="display-4">Food Recipe</h1>
            </div>
+
     </div>
     <!--end of jumbotron-->
 
@@ -78,12 +84,34 @@
     <!--view-->
     <div class="view" id="view">
         <div class="container">
+
+            <div id="slide-show"></div>
+            <div class="row row_up">
+                <!-- <div class="col-md-4 col-2 my-auto"></div> -->
+                <div class="col-6" id="search-container">
+                    <!-- <button class="btn btn-dark p-3" id="search-btn">Search your recipe <i class="fas fa-search"></i></button> -->
+                </div>
+                <div class="col-6" id="search-bar">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search for a recipe"
+                            aria-label="Search for a recipe" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button id="recipe-btn" class="btn btn-dark" type="submit" id="button-addon2">Search</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
             <!-- <div class="row row_up"> -->
             <!-- <div class="col-md-4 col-2 my-auto"></div> -->
             <div id="search-container">
                 <!-- <button class="btn btn-dark p-3" id="search-btn">Search your recipe <i class="fas fa-search"></i></button> -->
             </div>
             <div id="slide-show"></div>
+
         </div>
     </div>
     </div>

@@ -39,7 +39,7 @@ nav{
 }
 
 .view .row_up{
-    height: 20vh;
+    height: 100%;
 }
 
 .btn-dark{
@@ -48,6 +48,18 @@ nav{
     width: 261px;
 }
 /*end of view*/
+
+#search-bar {
+    margin-top: 1%;
+}
+
+#search-container {
+    margin-top: 1%;
+}
+
+#recipe-btn {
+    width: 100px
+}
 
 
 
