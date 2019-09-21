@@ -58,7 +58,15 @@ nav{
 }
 
 #recipe-btn {
-    width: 100px
+    width: 100px;
+}
+
+.small-btns {
+    width: 100px;
+}
+
+.next-btn {
+    margin-left:81%;
 }
 
 
