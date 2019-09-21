@@ -44,11 +44,7 @@ $(document).ready(function () {
         // Adding class to new div
       //  slideDiv.addClass("slide");
         // Showing our ingredient page within our page once the button has been clicked
-<<<<<<< HEAD
-        slideDiv.append($("<iframe width='1520' height='610' src='../code/Ingredient-Form-Grains.html' name='iframe_a'></iframe>"));
-=======
         slideShowFunction();
->>>>>>> 1b47b43df70740f0320243c6947ae2dc658ab970
         // Appending our new div to the slide-show div
 
     });
@@ -73,7 +69,7 @@ $(document).ready(function () {
     }
     // When next button is clicked, move on to next ingredient slide
     // Create for loop that allows us to loop through each ingredient list starting at slideshow-index=0 every time we click on next
-    var slideShow = ["../code/Ingredient-Form-Grains.html", "../code/Ingredient-Form-Fruit.html", "../code/Ingredient-Form-Dairy.html", "../code/Ingredient-Form-Baking-and-Spices.html", "../code/Ingredient-Form-Meat.html", "../code/Ingredient-Form-Vegetables.html"];
+    var slideShow = ["Ingredient-Form-Grains.html", "Ingredient-Form-Fruit.html", "Ingredient-Form-Dairy.html", "Ingredient-Form-Baking-and-Spices.html", "Ingredient-Form-Meat.html", "Ingredient-Form-Vegetables.html"];
 
     var slideIndex = 0;
 

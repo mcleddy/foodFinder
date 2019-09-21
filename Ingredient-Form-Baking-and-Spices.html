@@ -22,40 +22,56 @@
 </head>
 
 <body>
-
-    <h1>Pick Your Dairy</h1>
+    <h1>Pick Your Baking Ingredients and Spices</h1>
     <div class="ingredientOptions container">
         <div class="row">
             <div class="col-lg-4">
-                <div class="item"> <input type="checkbox" class="dairy" value="Butter">Butter</div>
-                <div class="item"> <input type="checkbox" class="dairy" value="Cheese-Bleu"> Cheese-Bleu</div>
-                <div class="item"> <input type="checkbox" class="dairy" value="Cheese-Brie">Cheese-Brie</div>
-                <br>
-                <div class="item"> <input type="checkbox" class="dairy" value="Cheese-Cheddar">Cheese-Cheddar</div>
-                <div class="item"> <input type="checkbox" class="dairy" value="Cheese-Mozzarella"> Cheese-Mozzarella
+                <div class="item"><input type="checkbox" class="bakingandspices" value="BakingPowder">Baking Powder
                 </div>
-                <div class="item"> <input type="checkbox" class="dairy" value="Cheese-Parmesan"> Cheese-Parmesan</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="BakingSoda"> Baking Soda</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="CayennePepper"> Cayenne Pepper
+                </div>
                 <br>
-                <div class="item"> <input type="checkbox" class="dairy" value="Cheese-Provolone"> Cheese-Provolone</div>
-                <div class="item"> <input type="checkbox" class="dairy" value="Cheese-Swiss"> Cheese-Swiss</div>
-                <div class="item"> <input type="checkbox" class="dairy" value="CottageCheese">Cottage Cheese</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="ChiliPowder"> Chili Powder
+                </div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="ChocolateMorsels"> Chocolate
+                    Morsels</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Cinnamon"> Cinnamon</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Clove"> Clove</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Cornmeal"> Cornmeal</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Cornstarch"> Cornstarch</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Flour"> Flour</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="GarlicPowder"> Garlic Powder
+                </div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Honey"> Honey</div>
             </div>
-            <div class="col-lg-4">
-                <div class="item"> <input type="checkbox" class="dairy" value="CreamCheese">Cream Cheese</div>
-                <div class="item"> <input type="checkbox" class="dairy" value="EvaporatedMilk"> Evaporated Milk</div>
-                <div class="item"><input type="checkbox" class="dairy" value="Eggs">Eggs</div>
-                <br>
-                <div class="item"><input type="checkbox" class="dairy" value="HalfandHalf">Half and Half</div>
-                <div class="item"><input type="checkbox" class="dairy" value="Milk">Milk</div>
-                <div class="item"><input type="checkbox" class="dairy" value="SourCream"> Sour Cream</div>
-                <br>
-                <div class="item"><input type="checkbox" class="dairy" value="WhippedCream">Whipped Cream</div>
-                <div class="item"><input type="checkbox" class="dairy" value="Yogurt"> Yogurt</div>
-            </div>
-        </div>
-        <input type="submit" class="add" value="Add Ingredients">
-    </div>
 
+            <div class="col-lg-4">
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Nutmeg"> Nutmeg</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Oil-Canola"> Oil-Canola</div>
+                <div class="item"><input type="checkbox" class="bakingandspices" value="Oil-Olive">Oil-Olive</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Oil-Vegetable"> Oil-Vegetable
+                </div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="OnionPowder"> Onion Powder
+                </div>
+                <div class="item"><input type="checkbox" class="bakingandspices" value="Paprika"> Paprika</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Pepper"> Pepper</div>
+                <div class="item"><input type="checkbox" class="bakingandspices" value="Salt"> Salt</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Shortening"> Shortening</div>
+                <br>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Sugar-Brown"> Sugar-Brown</div>
+                <div class="item"> <input type="checkbox" class="bakingandspices" value="Sugar-White"> Sugar-White</div>
+                <div class="item"><input type="checkbox" class="bakingandspices" value="Vanilla"> Vanilla</div>
+
+            </div>
+            <div class="add"><input type="submit" value="Add Ingredients"></div>
+        </div>
+
+    </div>
     <div class="row">
         <div class="col-lg-4">
             <div class="yourIngredients">
@@ -67,6 +83,7 @@
             </div>
         </div>
     </div>
+
     <style>
         .add {
             -webkit-text-stroke: 1px black;
@@ -75,6 +92,7 @@
             border-color: black;
             margin-left: 400px;
             margin-top: 20px;
+
         }
 
         h3 {
@@ -97,7 +115,8 @@
         }
 
         body {
-            background-image: url("../assets/images/Project1-background.jpg");
+            background-image: url("assets/images/Project1-background.jpg");
+            width: 100%;
         }
 
         h1 {
@@ -155,6 +174,7 @@
             border-style: solid;
             border-color: black;
         }
+
     </style>
 </body>
 
