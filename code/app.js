@@ -18,15 +18,31 @@ $(document).ready(function () {
 
     createBtn();
 
-    function createBtn(){
-    // Creating a dynamic button
-    var searchBtn = $("<button>");
-    // Adding classes to button
-    searchBtn.addClass("search-btn btn-dark p-3");
-    // Adding text and appending search icon to button
-    searchBtn.text("Search by ingredient ").append($("<span class='fas fa-search'></span>"));
-    // Appending button to container
-    $("#search-container").append(searchBtn);
+    function createBtn() {
+        // Creating a dynamic button
+        var searchBtn = $("<button>");
+        // Adding classes to button
+        searchBtn.addClass("search-btn btn-dark p-3");
+        // Adding text and appending search icon to button
+        searchBtn.text("Search by ingredient ").append($("<span class='fas fa-search'></span>"));
+        // Appending button to container
+        $("#search-container").append(searchBtn);
+    }
+
+    function createNextandPrev() {
+        var prevBtn = $("<button>");
+        prevBtn.addClass("prev-btn btn-dark p-3 small-btns");
+        prevBtn.attr("type", "submit");
+        prevBtn.attr("id", "prev");
+        prevBtn.text("Previous ");
+        $("#buttons").append(prevBtn);
+
+        var nextBtn = $("<button>");
+        nextBtn.addClass("next-btn btn-dark p-3 small-btns");
+        nextBtn.attr("type", "submit");
+        nextBtn.attr("id", "next");
+        nextBtn.text("Next ");
+        $("#buttons").append(nextBtn);
     }
 
     // on click events for the search button
@@ -44,8 +60,30 @@ $(document).ready(function () {
         // Adding class to new div
         slideDiv.addClass("slide");
         // Showing our ingredient page within our page once the button has been clicked
+        createNextandPrev()
         slideShowFunction();
-        // Appending our new div to the slide-show div
+       
+        $(".next-btn").on("click", function () {
+            console.log("Next!");
+            if (slideIndex < 5) {
+                slideIndex++;
+            }
+            else {
+                slideShow[5]
+            };
+            console.log(slideShow[slideIndex])
+            $("#slide-show").empty().append($("<iframe width='100%' height='500px' src='" + slideShow[slideIndex] + "' name='iframe_a'></iframe>"));
+        });
+        // When previous button is clicked, move to previous slide of ingredients
+        // Go the opposite way for previous button
+        $(".prev-btn").on("click", function () {
+            event.preventDefault();
+            console.log("Previous!");
+            if (slideIndex > 0) { slideIndex-- }
+            else { slideShow[0] };
+            console.log(slideShow[slideIndex]);
+            $("#slide-show").empty().append($("<iframe width='100%' height='500px' src='" + slideShow[slideIndex] + "' name='iframe_a'></iframe>"));
+        });
 
     });
 
@@ -57,7 +95,7 @@ $(document).ready(function () {
         $("#search-bar").remove();
 
     });
-    
+
     $("#ingredient-btn").on("click", function (event) {
         event.preventDefault();
         // console.log("I've been clicked!");
@@ -73,28 +111,6 @@ $(document).ready(function () {
 
     var slideIndex = 0;
 
-    $(".next").on("click", function (event) {
-        event.preventDefault();
-        console.log("Next!");
-        if (slideIndex < 5) {
-            slideIndex++;
-        }
-        else {
-            slideShow[5]
-        };
-        console.log(slideShow[slideIndex])
-        slideShowFunction();
-    });
-    // When previous button is clicked, move to previous slide of ingredients
-    // Go the opposite way for previous button
-    $(".prev").on("click", function (event) {
-        event.preventDefault();
-        console.log("Previous!");
-        if (slideIndex > 0) { slideIndex-- }
-        else { slideShow[0] };
-        console.log(slideShow[slideIndex]);
-        slideShowFunction();
-    });
 
     // Create click events for for each individual ingredients
     $(":checkbox").on("click", function () {
