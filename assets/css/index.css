@@ -65,8 +65,13 @@ nav{
     width: 100px;
 }
 
+#add-me {
+    width: 150px;
+    margin-left:40%;
+}
+
 .next-btn {
-    margin-left:81%;
+    margin-left:28%;
 }
 
 

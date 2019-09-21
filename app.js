@@ -37,13 +37,20 @@ $(document).ready(function () {
         prevBtn.text("Previous ");
         $("#buttons").append(prevBtn);
 
+        var addIngredientBtn = $("<button>");
+        addIngredientBtn.addClass("add-ingredients-btn btn-dark p-3");
+        addIngredientBtn.attr("type", "submit");
+        addIngredientBtn.attr("id", "add-me");
+        addIngredientBtn.text("Add ingredients ");
+        $("#buttons").append(addIngredientBtn);
+
         var nextBtn = $("<button>");
         nextBtn.addClass("next-btn btn-dark p-3 small-btns");
         nextBtn.attr("type", "submit");
         nextBtn.attr("id", "next");
         nextBtn.text("Next ");
         $("#buttons").append(nextBtn);
-    }
+    };
 
     // on click events for the search button
     $(".search-btn").on("click", function (event) {
