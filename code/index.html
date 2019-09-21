@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Adding link to Bootstrap javascript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
     <!-- Linking full jquery for ajax -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -38,8 +38,18 @@
     <!--jumbotron-->
     <div class="jumbotron jumbotron-fluid m-0  pb-3 text-white">
         <div class="container">
-            <h1 class="display-4">Food Recipe</h1>
+
+            <h1 class="display-4">Food Finder</h1>
+            <p class="lead">Find easy to make recipes! Or search by ingredient to find tailored recipes.</p>
         </div>
+
+            <h1 class="display-4">Food Recipe</h1>
+<<<<<<< HEAD
+        </div>
+=======
+           </div>
+
+>>>>>>> 1b47b43df70740f0320243c6947ae2dc658ab970
     </div>
     <!--end of jumbotron-->
 
@@ -78,12 +88,34 @@
     <!--view-->
     <div class="view" id="view">
         <div class="container">
+
+            <div id="slide-show"></div>
+            <div class="row row_up">
+                <!-- <div class="col-md-4 col-2 my-auto"></div> -->
+                <div class="col-6" id="search-container">
+                    <!-- <button class="btn btn-dark p-3" id="search-btn">Search your recipe <i class="fas fa-search"></i></button> -->
+                </div>
+                <div class="col-6" id="search-bar">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search for a recipe"
+                            aria-label="Search for a recipe" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button id="recipe-btn" class="btn btn-dark" type="submit" id="button-addon2">Search</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
             <!-- <div class="row row_up"> -->
             <!-- <div class="col-md-4 col-2 my-auto"></div> -->
             <div id="search-container">
                 <!-- <button class="btn btn-dark p-3" id="search-btn">Search your recipe <i class="fas fa-search"></i></button> -->
             </div>
             <div id="slide-show"></div>
+
         </div>
     </div>
     </div>
