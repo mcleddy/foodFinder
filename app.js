@@ -7,6 +7,12 @@ $(document).ready(function () {
 
     // Array that should hold all our checklist items
 
+    var slideShow = ["Ingredient-Form-Grains.html", "Ingredient-Form-Fruit.html", "Ingredient-Form-Dairy.html", "Ingredient-Form-Baking-and-Spices.html", "Ingredient-Form-Meat.html", "Ingredient-Form-Vegetables.html"];
+
+    var slideIndex = 0;
+
+    var ingredientArray = [];
+    
     // div to put the slideshow in
 
     /////////////////////////////////////////////////
@@ -37,7 +43,7 @@ $(document).ready(function () {
         $("#buttons").append(prevBtn);
 
         var addIngredientBtn = $("<button>");
-        addIngredientBtn.addClass("add-ingredients-btn btn-dark p-3");
+        addIngredientBtn.addClass("submit-btn btn-dark p-3");
         addIngredientBtn.attr("type", "submit");
         addIngredientBtn.attr("id", "add-me");
         addIngredientBtn.text("Add ingredients ");
@@ -64,11 +70,11 @@ $(document).ready(function () {
         // Creating new div to put the slideshow in
         slideDiv = $("<div>");
         // Adding class to new div
-        //  slideDiv.addClass("slide");
+      //  slideDiv.addClass("slide");
         // Showing our ingredient page within our page once the button has been clicked
         createNextandPrev()
         slideShowFunction();
-
+       
         $(".next-btn").on("click", function () {
             console.log("Next!");
             if (slideIndex < 5) {
@@ -77,6 +83,7 @@ $(document).ready(function () {
             else {
                 slideShow[5]
             };
+            
             console.log(slideShow[slideIndex])
             $("#slide-show").empty().append($("<iframe width='100%' height='500px' src='" + slideShow[slideIndex] + "' name='iframe_a'></iframe>"));
         });
@@ -91,64 +98,44 @@ $(document).ready(function () {
             $("#slide-show").empty().append($("<iframe width='100%' height='500px' src='" + slideShow[slideIndex] + "' name='iframe_a'></iframe>"));
         });
 
+        $(".submit-btn ").on("click", function (event) {
+            event.preventDefault();
+            // Create for loop for each item in ingredient array to show on the ingredient list with a remove button available 
+            // console.log("Add me");
+          
+          
+            
+            // Create new div with the ingredient to be placed in the list of ingredients
+            // var ingredientItem = $("<p>");
+            // //  Text should be text from the ingredient button
+            // ingredientItem.text("")
+            // //  Create a remove button for each ingredient
+            // var ingredientRemove = $("<button>");
+            // ingredientRemove.addClass("ckeckbox");
+            // ingredientRemove.text("-");
+            // ingredientItem.prepend(ingredientRemove);
+    
+            // $("#ingredient-list-result").append(ingredientItem);
+    
+        });
+
     });
 
 
-    $("#recipe-btn").on("click", function (event) {
-        event.preventDefault();
-        // console.log("I've been clicked!");
-        $("#search-container").remove();
-        $("#search-bar").remove();
-
-    });
-
-    $("#ingredient-btn").on("click", function (event) {
-        event.preventDefault();
-        // console.log("I've been clicked!");
-        $("#ingredient-list-result").append();
-    });
+    // $("#ingredient-btn").on("click", function (event) {
+    //     event.preventDefault();
+    //     // console.log("I've been clicked!");
+    //     $("#ingredient-list-result").append();
+    // });
 
     function slideShowFunction() {
         $("#slide-show").append($("<iframe width='1520' height='575' src='" + slideShow[slideIndex] + "' name='iframe_a'></iframe>"));
     }
     // When next button is clicked, move on to next ingredient slide
     // Create for loop that allows us to loop through each ingredient list starting at slideshow-index=0 every time we click on next
-    var slideShow = ["Ingredient-Form-Grains.html", "Ingredient-Form-Fruit.html", "Ingredient-Form-Dairy.html", "Ingredient-Form-Baking-and-Spices.html", "Ingredient-Form-Meat.html", "Ingredient-Form-Vegetables.html"];
-
-    var slideIndex = 0;
-
-    var ingredientArray = [];
+ 
     // Create click events for for each individual ingredients
 
-    $(document).on("click", "#add-me", function () {
-        // Create for loop for each item in ingredient array to show on the ingredient list with a remove button available 
-        // console.log("Add me");
-
-        // Collect text from the checkbox item
-        // var ingredientValue = $(":checkbox").val();
-
-        console.log(elements)
-        for (let element in document.querySelectorAll(".grain")) {
-            console.log(element)
-            if (element.checked) {
-                console.log(elements[element])
-            }
-        }
-
-
-        // Create new div with the ingredient to be placed in the list of ingredients
-        var ingredientItem = $("<p>");
-        //  Text should be text from the ingredient button
-        ingredientItem.text("")
-        //  Create a remove button for each ingredient
-        var ingredientRemove = $("<button>");
-        ingredientRemove.addClass("ckeckbox");
-        ingredientRemove.text("-");
-        ingredientItem.prepend(ingredientRemove);
-
-        $("#ingredient-list-result").append(ingredientItem);
-
-    })
     /////////////////////////////////////////////////////////
 
     // AJAX CALL //
@@ -164,8 +151,8 @@ $(document).ready(function () {
 
     var searchTerm = "chicken"
 
-
-    var queryURL = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=" + appId + "&app_key=" + api_key + "&from=0&to=5";
+    
+    var queryURL = "https://api.edamam.com/search?q=" +searchTerm+ "&app_id=" + appId + "&app_key=" + api_key + "&from=0&to=5";
 
     console.log(queryURL);
 
@@ -185,8 +172,13 @@ $(document).ready(function () {
 
     });
 
+
+// Running function when recipe button is clicked after enetering items in search bar
+$("#recipe-btn").on("click", function (event) {
+    event.preventDefault();
+    // console.log("I've been clicked!");
+    $("#search-container").remove();
+    $("#search-bar").remove();
+
 });
-
-
-                    // create click event for the recipe
-                        // when recipe is clicked show all the recipe's information
+});
