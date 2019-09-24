@@ -44,44 +44,6 @@
         </div>
 
     </div>
-
-
-    </div>
-    <!--end of jumbotron-->
-
-
-    <header>
-        <!--nev bar-->
-        <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top ">
-        <a class="navbar-brand" href="#">
-            <img src="../assets/img/logo.jpg" style="width:40px;">
-        </a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-        </div>
-    </nav> -->
-        <!--end of nav bar-->
-        <!--head-->
-    </header>
-    <!--end of head-->
-    <!--view-->
     <div class="view" id="view">
         <div class="container">
             <div id="slide-show"></div>
@@ -104,8 +66,28 @@
                 </div>
 
             </div>
-
-
+            <div class="row">
+                <div class="col-md-4" id="recipe-card1">
+                    <div id="recipes-go-here1"></div>
+                    <div id="ingredients-go-here1"></div>
+                    <img id="pic-goes-here1"></img>
+                </div>
+                <div class="col-md-4" id="recipe-card2">
+                    <div id="recipe2-go-here2"></div>
+                    <div id="ingredients-go-here2"></div>
+                    <img id="pic-goes-here2"></img>
+                </div>
+                <div class="col-md-4" id="recipe-card3">
+                    <div id="recipes-go-here3"></div>
+                    <div id="ingredients-go-here3"></div>
+                    <img id="pic-goes-here3"></img>
+                </div>
+                <div class="col-md-4" id="recipe-card4">
+                    <div id="recipes-go-here4"></div>
+                    <div id="ingredients-go-here4"></div>
+                    <img id="pic-goes-here4"></img>
+                </div>
+            </div>
             <!-- <div class="row row_up"> -->
             <!-- <div class="col-md-4 col-2 my-auto"></div> -->
             <div id="search-container">
@@ -120,16 +102,117 @@
     <!--end of view-->
 
     <script>
+        var ingredients = [""];
 
+        for (var i = 0; i < ingredients.length; i++) {
+            $("<button>")
+            var a = $("<button>");
+
+            a.addClass("ingredient");
+
+            a.attr("q");
+            a.text(ingredients[i]);
+        }
+
+        $("#recipe-btn").on("click", function (event) {
+
+            event.preventDefault();
+
+
+            var ingredient = $(".form-control").val().trim();
+
+            ingredients.push(ingredient);
+
+            console.log(ingredients);
+        })
+
+        $("button").on("click", function () {
+            var ingredient = $(this).attr("q");
+
+            var api_key = "bd3f05a4afcbd7d5d08c20e7058187df";
+            var appId = "1388115a";
+            var queryURL = "https://api.edamam.com/search?q=" + ingredients + "&app_id=" + appId + "&app_key=" + api_key + "&from=0&to=5";
+            console.log(queryURL);
+
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            })
+
+                .then(function (response) {
+                    console.log(queryURL);
+                    console.log(response);
+                    var results = response.hits;
+                    for (var i = 0; i < results.length; i++) {
+                        console.log(results);
+                        var recipeDiv = $("<div>");
+                        var name = $("#recipes-go-here1").text("Recipe: " + results[0, 1, 2, 3, 4].recipe.label)
+                        var ingredientList = $("#ingredients-go-here1").text("Ingredients: " + results[i].recipe.ingredientLines.toString([i]))
+                        var recipeImage = $("ingredients-go-here1").image(results[i].recipe.image);
+                        recipeImage.attr("src", results[i].recipe.image)
+                        console.log(results);
+                        console.log(recipeDiv);
+                    }
+                });
+
+        });
     </script>
+
     <style>
+        #recipe-card1 {
+            text-align: center;
+            -webkit-text-stroke: 1px black;
+            color: rgb(61, 2, 55);
+            background-color: aliceblue;
+            border-style: double;
+            border-color: black;
+            border-width: thick;
+            margin: 50px;
+            margin-left:230px;
+        }
+
+        #recipe-card2 {
+            text-align: center;
+            -webkit-text-stroke: 1px black;
+            color: rgb(61, 2, 55);
+            background-color: aliceblue;
+            border-style: double;
+            border-color: black;
+            border-width: thick;
+            margin: 50px;
+        }
+
+        #recipe-card3 {
+            text-align: center;
+            -webkit-text-stroke: 1px black;
+            color: rgb(61, 2, 55);
+            background-color: aliceblue;
+            border-style: double;
+            border-color: black;
+            border-width: thick;
+            margin: 50px;
+        }
+
+        #recipe-card4 {
+            text-align: center;
+            -webkit-text-stroke: 1px black;
+            color: rgb(61, 2, 55);
+            background-color: aliceblue;
+            border-style: double;
+            border-color: black;
+            border-width: thick;
+            margin: 50px;
+        }
+
         .search-container {
             margin-left: 50px;
         }
 
         .search-container {
             margin-left: 50px;
-        } .jumbotron {
+        }
+
+        .jumbotron {
             height: 20%;
             padding: 20px;
         }
@@ -152,13 +235,6 @@
 
         .lead {
             margin-left: 50px;
-        }
-
-        #buttons{
-            background-color: brown;
-            width: 1520px;
-            height: 75px;
-            padding: 0%;
         }
     </style>
 </body>
