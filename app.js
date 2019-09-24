@@ -7,6 +7,9 @@ $(document).ready(function () {
     var slideIndex = 0;
 
 
+    var uniqueIngredients = []
+
+
     // div to put the slideshow in
 
     // FUNCTIONS //
@@ -36,7 +39,7 @@ $(document).ready(function () {
         addIngredientBtn.addClass("submit-btn btn-dark p-3");
         addIngredientBtn.attr("type", "submit");
         addIngredientBtn.attr("id", "add-me");
-        addIngredientBtn.text("Add ingredients ");
+        addIngredientBtn.text("Submit ");
         $("#buttons").append(addIngredientBtn);
 
         var nextBtn = $("<button>");
@@ -80,8 +83,10 @@ $(document).ready(function () {
             console.log(slideShow[slideIndex])
             $("#slide-show").empty();
             slideShowFunction();
+
             var ingredientFrame = $("#ingredient-list-result");
-                ingredientFrame.text("Ingredients chosen: " + ingredientArray);
+            ingredientFrame.text("Ingredients chosen: " + uniqueIngredients);
+
         });
         // When previous button is clicked, move to previous slide of ingredients
         // Go the opposite way for previous button
@@ -95,16 +100,52 @@ $(document).ready(function () {
             slideShowFunction();
         });
 
+        $(".submit-btn").on("click", function () {
+            
+            var ingredientsAdded = uniqueIngredients;
+    
+            var api_key = "bd3f05a4afcbd7d5d08c20e7058187df";
+            var appId = "1388115a";
+            var queryURL = "https://api.edamam.com/search?q=" + ingredientsAdded + "&app_id=" + appId + "&app_key=" + api_key + "&from=0&to=5";
+            console.log(queryURL);
+    
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            })
+    
+                .then(function (response) {
+                    console.log(queryURL);
+                    console.log(response);
+                    var results = response.hits;
+                    for (var i = 0; i < results.length; i++) {
+                        console.log(results);
+                        var recipeDiv = $("<div>");
+                        $("#recipes-go-here1").text("Recipe: " + results[0, 1, 2, 3, 4].recipe.label)
+                        $("#ingredients-go-here1").text("Ingredients: " + results[i].recipe.ingredientLines.toString([i]))
+                        var recipeImage = $("ingredients-go-here1").image(results[i].recipe.image);
+                        recipeImage.attr("src", results[i].recipe.image)
+                        console.log(results);
+                        console.log(recipeDiv);
+                    }
+                });
+        })
+
 
     });
 
+
     // Gets value of checkbox and adds into an array
     $(".add-me").on("click", function () {
+
         const ingredientArray = [];
+
+
         $('.add-me:checked').each(function () {
 
             var values = $(this).val();
             ingredientArray.push(values);
+            uniqueIngredients.push(ingredientArray);
 
             console.log(ingredientArray);
 
@@ -116,39 +157,16 @@ $(document).ready(function () {
 
             }
 
-            $("#add-me").on("click", function () {
-                var ingredientsAdded = ingredientArray;
-
-                var api_key = "bd3f05a4afcbd7d5d08c20e7058187df";
-                var appId = "1388115a";
-                var queryURL = "https://api.edamam.com/search?q=" + ingredientsAdded + "&app_id=" + appId + "&app_key=" + api_key + "&from=0&to=5";
-                console.log(queryURL);
-
-                $.ajax({
-                    url: queryURL,
-                    method: "GET"
-                })
-
-                    .then(function (response) {
-                        console.log(queryURL);
-                        console.log(response);
-                        var results = response.hits;
-                        for (var i = 0; i < results.length; i++) {
-                            console.log(results);
-                            var recipeDiv = $("<div>");
-                             $("#recipes-go-here1").text("Recipe: " + results[0, 1, 2, 3, 4].recipe.label)
-                            $("#ingredients-go-here1").text("Ingredients: " + results[i].recipe.ingredientLines.toString([i]))
-                            var recipeImage = $("ingredients-go-here1").image(results[i].recipe.image);
-                            recipeImage.attr("src", results[i].recipe.image)
-                            console.log(results);
-                            console.log(recipeDiv);
-                        }
-                    });
-            })
+            
 
         });
 
+        
+        // $("#greeting").text(cookieName);
+
     });
+
+    
 
 
 
