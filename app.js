@@ -1,10 +1,5 @@
 $(document).ready(function () {
-    ////////////////////////////////////////////////
-
     // VARIABLES //
-
-    ////////////////////////////////////////////////
-
     // Array that should hold all our checklist items
 
     var slideShow = ["Ingredient-Form-Grains.html", "Ingredient-Form-Fruit.html", "Ingredient-Form-Dairy.html", "Ingredient-Form-Baking-and-Spices.html", "Ingredient-Form-Meat.html", "Ingredient-Form-Vegetables.html"];
@@ -14,12 +9,7 @@ $(document).ready(function () {
 
     // div to put the slideshow in
 
-    /////////////////////////////////////////////////
-
     // FUNCTIONS //
-
-    /////////////////////////////////////////////////
-
     createBtn();
 
     function createBtn() {
@@ -75,7 +65,9 @@ $(document).ready(function () {
         createNextandPrev()
         slideShowFunction();
 
+
         // When next button is clicked move on to next slide
+
         $(".next-btn").on("click", function () {
             console.log("Next!");
             if (slideIndex < 5) {
@@ -133,41 +125,14 @@ $(document).ready(function () {
 
     // Create click events for for each individual ingredients
 
+
     /////////////////////////////////////////////////////////
 
     // AJAX CALL //
 
     /////////////////////////////////////////////////////////
 
-    // When submit button is clicked, run ajax call that gathers up all the ingredients in the list of ingredients
 
-
-    var api_key = "bd3f05a4afcbd7d5d08c20e7058187df";
-
-    var appId = "1388115a";
-
-    var searchTerm = "chicken"
-
-
-    var queryURL = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=" + appId + "&app_key=" + api_key + "&from=0&to=5";
-
-    console.log(queryURL);
-
-
-    var api_key = "bd3f05a4afcbd7d5d08c20e7058187df";
-
-    var appId = "1388115a";
-
-    var searchTerm = "chicken"
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-
-        // response should show up in the results page, with the recipe cards
-    }).then(function (response) {
-        console.log(response);
-
-    });
 
 
     // Running function when recipe button is clicked after enetering items in search bar
@@ -176,6 +141,5 @@ $(document).ready(function () {
         // console.log("I've been clicked!");
         $("#search-container").remove();
         $("#search-bar").remove();
-
     });
 });
