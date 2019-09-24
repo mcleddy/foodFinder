@@ -69,23 +69,33 @@
             <div class="row">
                 <div class="col-md-4" id="recipe-card1">
                     <div id="recipes-go-here1"></div>
+                    <br>
+                    <div id="cooking-time-goes-here1"></div>
                     <div id="ingredients-go-here1"></div>
-                    <img id="pic-goes-here1"></img>
+                    <div id="pic-goes-here1"></div>
                 </div>
+
                 <div class="col-md-4" id="recipe-card2">
                     <div id="recipe2-go-here2"></div>
+                    <br>
+                    <div id="cooking-time-goes-here2"></div>
                     <div id="ingredients-go-here2"></div>
-                    <img id="pic-goes-here2"></img>
+                    <div id="pic-goes-here2"></div>
                 </div>
+
                 <div class="col-md-4" id="recipe-card3">
                     <div id="recipes-go-here3"></div>
+                    <br>
+                    <div id="cooking-time-goes-here3"></div>
                     <div id="ingredients-go-here3"></div>
-                    <img id="pic-goes-here3"></img>
+                    <div id="pic-goes-here3"></div>
                 </div>
                 <div class="col-md-4" id="recipe-card4">
                     <div id="recipes-go-here4"></div>
+                    <br>
+                    <div id="cooking-time-goes-here4"></div>
                     <div id="ingredients-go-here4"></div>
-                    <img id="pic-goes-here4"></img>
+                    <div id="pic-goes-here4"></div>
                 </div>
             </div>
             <!-- <div class="row row_up"> -->
@@ -97,10 +107,8 @@
 
         </div>
     </div>
-    </div>
-    <footer></footer>
-    <!--end of view-->
 
+    <!--end of view-->
     <script>
         var ingredients = [""];
 
@@ -143,21 +151,45 @@
                     console.log(queryURL);
                     console.log(response);
                     var results = response.hits;
+
                     for (var i = 0; i < results.length; i++) {
                         console.log(results);
                         var recipeDiv = $("<div>");
-                        var name = $("#recipes-go-here1").text("Recipe: " + results[0, 1, 2, 3, 4].recipe.label)
-                        var ingredientList = $("#ingredients-go-here1").text("Ingredients: " + results[i].recipe.ingredientLines.toString([i]))
-                        var recipeImage = $("ingredients-go-here1").image(results[i].recipe.image);
-                        recipeImage.attr("src", results[i].recipe.image)
+                        var name = ($("#recipes-go-here1").text("Recipe: " + results[1].recipe.label), $("#recipe2-go-here2").text("Recipe: " + results[0].recipe.label), $("#recipes-go-here3").text("Recipe: " + results[2].recipe.label), $("#recipes-go-here4").text("Recipe: " + results[3].recipe.label), $("#recipes-go-here5").text("Recipe: " + results[4].recipe.label))
+                        console.log(results[i]);
+                        var ingredientList = ($("#ingredients-go-here1").text("Ingredients: " + results[1].recipe.ingredientLines.toString([i])), $("#ingredients-go-here2").text("Ingredients: " + results[0].recipe.ingredientLines.toString([i])), $("#ingredients-go-here3").text("Ingredients: " + results[2].recipe.ingredientLines.toString([i])), $("#ingredients-go-here4").text("Ingredients: " + results[4].recipe.ingredientLines.toString([i])));
+                        var cooktime=($("#cooking-time-goes-here1").text("Cooking Time: " + results[1].recipe.totalTime +" minutes"), $("#cooking-time-goes-here2").text("Cooking Time: " + results[0].recipe.totalTime +" minutes"), $("#cooking-time-goes-here3").text("Cooking Time: " + results[2].recipe.totalTime +" minutes"), $("#cooking-time-goes-here4").text("Cooking Time: " + results[3].recipe.totalTime +" minutes"));
+                        $("#recipe-card1").append($("<a href="+(results[1].recipe.url+ ">Directions</a>")));
+                        $("#recipe-card2").append($("<a href="+(results[0].recipe.url+ ">Directions</a>")));
+                        $("#recipe-card3").append($("<a href="+(results[2].recipe.url+ ">Directions</a>")));
+                        $("#recipe-card4").append($("<a href="+(results[3].recipe.url+ ">Directions</a>")));
+                        
+                        var recipeImage=new Image(200, 200);
+                        recipeImage.src=results[1].recipe.image
+                        document.getElementById("pic-goes-here1").appendChild(recipeImage);
+                        
+                        var recipeImage=new Image(200, 200);
+                        recipeImage.src=results[0].recipe.image
+                        document.getElementById("pic-goes-here2").appendChild(recipeImage);
+                        
+                        var recipeImage=new Image(200, 200);
+                        recipeImage.src=results[2].recipe.image
+                        document.getElementById("pic-goes-here3").appendChild(recipeImage);
+                        
+                        var recipeImage=new Image(200, 200);
+                        recipeImage.src=results[3].recipe.image
+                        document.getElementById("pic-goes-here4").appendChild(recipeImage);
+                        
+                        console.log(recipeImage);
                         console.log(results);
                         console.log(recipeDiv);
+                        console.log(directions);
                     }
                 });
 
         });
-    </script>
 
+    </script>
     <style>
         #recipe-card1 {
             text-align: center;
@@ -168,7 +200,7 @@
             border-color: black;
             border-width: thick;
             margin: 50px;
-            margin-left:230px;
+            margin-left: 230px;
         }
 
         #recipe-card2 {
