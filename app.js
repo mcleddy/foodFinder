@@ -1,21 +1,10 @@
 $(document).ready(function () {
-    ////////////////////////////////////////////////
-
     // VARIABLES //
-
-    ////////////////////////////////////////////////
-
     // Array that should hold all our checklist items
     var ingredientArray = [];
     // div to put the slideshow in
     var slideDiv;
-
-    /////////////////////////////////////////////////
-
     // FUNCTIONS //
-
-    /////////////////////////////////////////////////
-
     createBtn();
 
     function createBtn() {
@@ -65,11 +54,11 @@ $(document).ready(function () {
         // Creating new div to put the slideshow in
         slideDiv = $("<div>");
         // Adding class to new div
-      //  slideDiv.addClass("slide");
+        //  slideDiv.addClass("slide");
         // Showing our ingredient page within our page once the button has been clicked
         createNextandPrev()
         slideShowFunction();
-       
+
         $(".next-btn").on("click", function () {
             console.log("Next!");
             if (slideIndex < 5) {
@@ -151,45 +140,8 @@ $(document).ready(function () {
 
         $("#ingredient-list-result").append(ingredientItem);
 
-    })
-    /////////////////////////////////////////////////////////
-
-    // AJAX CALL //
-
-    /////////////////////////////////////////////////////////
-
-    // When submit button is clicked, run ajax call that gathers up all the ingredients in the list of ingredients
 
 
-    var api_key = "bd3f05a4afcbd7d5d08c20e7058187df";
-
-    var appId = "1388115a";
-
-    var searchTerm = "chicken"
-
-    
-    var queryURL = "https://api.edamam.com/search?q=" +searchTerm+ "&app_id=" + appId + "&app_key=" + api_key + "&from=0&to=5";
-
-    console.log(queryURL);
-
-
-    var api_key = "bd3f05a4afcbd7d5d08c20e7058187df";
-
-    var appId = "1388115a";
-
-    var searchTerm = "chicken"
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-
-        // response should show up in the results page, with the recipe cards
-    }).then(function (response) {
-        console.log(response);
 
     });
-
 });
-
-
-                    // create click event for the recipe
-                        // when recipe is clicked show all the recipe's information
