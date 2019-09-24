@@ -27,45 +27,51 @@
     <div class="ingredientOptions container">
         <div class="row">
             <div class="col-lg-4">
-                <div class="item"> <input type="checkbox" class="dairy" value="Butter">Butter</div>
-                <div class="item"> <input type="checkbox" class="dairy" value="Cheese-Bleu"> Cheese-Bleu</div>
-                <div class="item"> <input type="checkbox" class="dairy" value="Cheese-Brie">Cheese-Brie</div>
+                <div class="item"> <input type="checkbox" class="add-me dairy" value="Butter">Butter</div>
+                <div class="item"> <input type="checkbox" class="add-me dairy" value="Cheese-Bleu"> Cheese-Bleu</div>
+                <div class="item"> <input type="checkbox" class="add-me dairy" value="Cheese-Brie">Cheese-Brie</div>
                 <br>
-                <div class="item"> <input type="checkbox" class="dairy" value="Cheese-Cheddar">Cheese-Cheddar</div>
-                <div class="item"> <input type="checkbox" class="dairy" value="Cheese-Mozzarella"> Cheese-Mozzarella
+                <div class="item"> <input type="checkbox" class="add-me dairy" value="Cheese-Cheddar">Cheese-Cheddar
                 </div>
-                <div class="item"> <input type="checkbox" class="dairy" value="Cheese-Parmesan"> Cheese-Parmesan</div>
+                <div class="item"> <input type="checkbox" class="add-me dairy" value="Cheese-Mozzarella">
+                    Cheese-Mozzarella
+                </div>
+                <div class="item"> <input type="checkbox" class="add-me dairy" value="Cheese-Parmesan"> Cheese-Parmesan
+                </div>
                 <br>
-                <div class="item"> <input type="checkbox" class="dairy" value="Cheese-Provolone"> Cheese-Provolone</div>
-                <div class="item"> <input type="checkbox" class="dairy" value="Cheese-Swiss"> Cheese-Swiss</div>
-                <div class="item"> <input type="checkbox" class="dairy" value="CottageCheese">Cottage Cheese</div>
+                <div class="item"> <input type="checkbox" class="add-me dairy" value="Cheese-Provolone">
+                    Cheese-Provolone</div>
+                <div class="item"> <input type="checkbox" class="add-me dairy" value="Cheese-Swiss"> Cheese-Swiss</div>
+                <div class="item"> <input type="checkbox" class="add-me dairy" value="CottageCheese">Cottage Cheese
+                </div>
             </div>
             <div class="col-lg-4">
-                <div class="item"> <input type="checkbox" class="dairy" value="CreamCheese">Cream Cheese</div>
-                <div class="item"> <input type="checkbox" class="dairy" value="EvaporatedMilk"> Evaporated Milk</div>
-                <div class="item"><input type="checkbox" class="dairy" value="Eggs">Eggs</div>
+                <div class="item"> <input type="checkbox" class="add-me dairy" value="CreamCheese">Cream Cheese</div>
+                <div class="item"> <input type="checkbox" class="add-me dairy" value="EvaporatedMilk"> Evaporated Milk
+                </div>
+                <div class="item"><input type="checkbox" class="add-me dairy" value="Eggs">Eggs</div>
                 <br>
-                <div class="item"><input type="checkbox" class="dairy" value="HalfandHalf">Half and Half</div>
-                <div class="item"><input type="checkbox" class="dairy" value="Milk">Milk</div>
-                <div class="item"><input type="checkbox" class="dairy" value="SourCream"> Sour Cream</div>
+                <div class="item"><input type="checkbox" class="add-me dairy" value="HalfandHalf">Half and Half</div>
+                <div class="item"><input type="checkbox" class="add-me dairy" value="Milk">Milk</div>
+                <div class="item"><input type="checkbox" class="add-me dairy" value="SourCream"> Sour Cream</div>
                 <br>
-                <div class="item"><input type="checkbox" class="dairy" value="WhippedCream">Whipped Cream</div>
-                <div class="item"><input type="checkbox" class="dairy" value="Yogurt"> Yogurt</div>
-            </div>
-        </div>
-        <input type="submit" class="add" value="Add Ingredients">
-    </div>
+                <div class="item"><input type="checkbox" class="add-me dairy" value="WhippedCream">Whipped Cream</div>
+                <div class="item"><input type="checkbox" class="add-me dairy" value="Yogurt"> Yogurt</div>
 
-    <div class="row">
-        <div class="col-lg-4">
-            <div class="yourIngredients">
-                </form>
-                <h3>Your Ingredients:</h3>
-                <iframe name="result" style="height:200px;width:400px;"></iframe>
-                <input type="submit" class="prev" value="Previous">
-                <input type="submit" class="next" value="Next">
+                <input type="submit" class="add" value="Add Ingredients">
+            </div>
+            <div class="col-lg-4">
+                <div class="yourIngredients">
+                    </form>
+                    <h3>Your Ingredients:</h3>
+                    <div name="result" style="height:200px;width:600px;background-color: aliceblue"
+                        id="ingredient-list-result"></div>
+
+                </div>
+
             </div>
         </div>
+
     </div>
     <style>
         .add {

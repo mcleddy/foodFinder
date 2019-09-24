@@ -78,7 +78,10 @@ $(document).ready(function () {
             };
 
             console.log(slideShow[slideIndex])
-            $("#slide-show").empty().append($("<iframe width='100%' height='500px' src='" + slideShow[slideIndex] + "' name='iframe_a'></iframe>"));
+            $("#slide-show").empty();
+            slideShowFunction();
+            var ingredientFrame = $("#ingredient-list-result");
+                ingredientFrame.text("Ingredients chosen: " + ingredientArray);
         });
         // When previous button is clicked, move to previous slide of ingredients
         // Go the opposite way for previous button
@@ -88,16 +91,17 @@ $(document).ready(function () {
             if (slideIndex > 0) { slideIndex-- }
             else { slideShow[0] };
             console.log(slideShow[slideIndex]);
-            $("#slide-show").empty().append($("<iframe width='100%' height='500px' src='" + slideShow[slideIndex] + "' name='iframe_a'></iframe>"));
+            $("#slide-show").empty();
+            slideShowFunction();
         });
 
 
     });
 
     // Gets value of checkbox and adds into an array
-    $(".grain").on("click", function () {
+    $(".add-me").on("click", function () {
         const ingredientArray = [];
-        $('.grain:checked').each(function () {
+        $('.add-me:checked').each(function () {
 
             var values = $(this).val();
             ingredientArray.push(values);
@@ -106,15 +110,47 @@ $(document).ready(function () {
 
             for (var i = 0; i < ingredientArray.length; i++) {
                 console.log(ingredientArray[i]);
-                
+
                 var ingredientFrame = $("#ingredient-list-result");
                 ingredientFrame.text("Ingredients chosen: " + ingredientArray);
-               
+
             }
+
+            $("#add-me").on("click", function () {
+                var ingredientsAdded = ingredientArray;
+
+                var api_key = "bd3f05a4afcbd7d5d08c20e7058187df";
+                var appId = "1388115a";
+                var queryURL = "https://api.edamam.com/search?q=" + ingredientsAdded + "&app_id=" + appId + "&app_key=" + api_key + "&from=0&to=5";
+                console.log(queryURL);
+
+                $.ajax({
+                    url: queryURL,
+                    method: "GET"
+                })
+
+                    .then(function (response) {
+                        console.log(queryURL);
+                        console.log(response);
+                        var results = response.hits;
+                        for (var i = 0; i < results.length; i++) {
+                            console.log(results);
+                            var recipeDiv = $("<div>");
+                             $("#recipes-go-here1").text("Recipe: " + results[0, 1, 2, 3, 4].recipe.label)
+                            $("#ingredients-go-here1").text("Ingredients: " + results[i].recipe.ingredientLines.toString([i]))
+                            var recipeImage = $("ingredients-go-here1").image(results[i].recipe.image);
+                            recipeImage.attr("src", results[i].recipe.image)
+                            console.log(results);
+                            console.log(recipeDiv);
+                        }
+                    });
+            })
 
         });
 
     });
+
+
 
     // Function for the slideshow
     function slideShowFunction() {
@@ -132,14 +168,4 @@ $(document).ready(function () {
 
     /////////////////////////////////////////////////////////
 
-
-
-
-    // Running function when recipe button is clicked after enetering items in search bar
-    $("#recipe-btn").on("click", function (event) {
-        event.preventDefault();
-        // console.log("I've been clicked!");
-        $("#search-container").remove();
-        $("#search-bar").remove();
-    });
 });
