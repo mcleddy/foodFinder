@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
     var ingredients = [""];
 
@@ -58,7 +57,7 @@
             });
 
     });
-=======
+
 $(document).ready(function () {
     // VARIABLES //
     // Array that should hold all our checklist items
@@ -97,7 +96,7 @@ $(document).ready(function () {
         addIngredientBtn.addClass("submit-btn btn-dark p-3");
         addIngredientBtn.attr("type", "submit");
         addIngredientBtn.attr("id", "add-me");
-        addIngredientBtn.text("Add ingredients ");
+        addIngredientBtn.text("Submit ");
         $("#buttons").append(addIngredientBtn);
 
         var nextBtn = $("<button>");
@@ -130,6 +129,7 @@ $(document).ready(function () {
         // When next button is clicked move on to next slide
 
         $(".next-btn").on("click", function () {
+            event.preventDefault();
             console.log("Next!");
             if (slideIndex < 5) {
                 slideIndex++;
@@ -139,7 +139,8 @@ $(document).ready(function () {
             };
 
             console.log(slideShow[slideIndex])
-            $("#slide-show").empty().append($("<iframe width='100%' height='500px' src='" + slideShow[slideIndex] + "' name='iframe_a'></iframe>"));
+            $("#slide-show").empty();
+            slideShowFunction();
         });
         // When previous button is clicked, move to previous slide of ingredients
         // Go the opposite way for previous button
@@ -149,31 +150,71 @@ $(document).ready(function () {
             if (slideIndex > 0) { slideIndex-- }
             else { slideShow[0] };
             console.log(slideShow[slideIndex]);
-            $("#slide-show").empty().append($("<iframe width='100%' height='500px' src='" + slideShow[slideIndex] + "' name='iframe_a'></iframe>"));
+            $("#slide-show").empty();
+            slideShowFunction();
         });
 
+        // Gets value of checkbox and adds into an array
 
-    });
+    })
 
-    // Gets value of checkbox and adds into an array
-    $(".grain").on("click", function () {
-        const ingredientArray = [];
-        $('.grain:checked').each(function () {
+    $(".add-me").on("click", function () {
+
+
+        const ingredientArray = [""];
+
+
+        $('.add-me:checked').each(function () {
 
             var values = $(this).val();
             ingredientArray.push(values);
 
+
             console.log(ingredientArray);
+
 
             for (var i = 0; i < ingredientArray.length; i++) {
                 console.log(ingredientArray[i]);
-                
+
                 var ingredientFrame = $("#ingredient-list-result");
                 ingredientFrame.text("Ingredients chosen: " + ingredientArray);
-               
+
             }
 
         });
+
+        var api_key = "bd3f05a4afcbd7d5d08c20e7058187df";
+        var appId = "1388115a";
+        var queryURL = "https://api.edamam.com/search?q=" + ingredientArray + "&app_id=" + appId + "&app_key=" + api_key + "&from=0&to=5";
+        console.log(queryURL);
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        })
+
+            .then(function (response) {
+
+                console.log(response);
+                var results = response.hits;
+                console.log(results);
+                for (var i = 0; i < results.length; i++) {
+                    console.log(results[i]);
+                    console.log(results[i].recipe);
+                    console.log(results[i].recipe.label);
+                    var recipeDiv = $("<div>");
+                    var name = $("#recipes-go-here1").text("Recipe: " + results[0, 1, 2, 3, 4].recipe.label);
+                    var ingredientList = $("#ingredients-go-here1").text("Ingredients: " + results[i].recipe.ingredientLines.toString([i]))
+
+                    
+                    var recipeImage = $("ingredients-go-here1").image(results[i].recipe.image);
+                    recipeImage.attr("src", results[i].recipe.image)
+
+                }
+
+            });
+
+
 
     });
 
@@ -193,15 +234,5 @@ $(document).ready(function () {
 
     /////////////////////////////////////////////////////////
 
-
-
-
-    // Running function when recipe button is clicked after enetering items in search bar
-    $("#recipe-btn").on("click", function (event) {
-        event.preventDefault();
-        // console.log("I've been clicked!");
-        $("#search-container").remove();
-        $("#search-bar").remove();
-    });
 });
->>>>>>> 905b3d42ba26f4b11005612fa6f1919e8f76efa8
+
