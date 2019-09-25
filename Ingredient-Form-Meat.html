@@ -6,26 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <!-- Adding link to our js file  -->
+    <script src="app.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
 </head>
 
 <body>
@@ -34,54 +27,92 @@
     <div class="ingredientOptions container">
         <div class="row">
             <div class="col-lg-4">
-                <div class="item"> <input type="checkbox" class="meat" value="Bass">Bass </div>
-                <div class="item"> <input type="checkbox" class="meat" value="BeefFilet"> Beef Filet</div>
-                <div class="item"> <input type="checkbox" class="meat" value="Catfish"> Catfish</div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="Bass">Bass </div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="BeefFilet"> Beef Filet</div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="Catfish"> Catfish</div>
                 <br>
-                <div class="item"> <input type="checkbox" class="meat" value="ChickenBreast"> Chicken Breast
+                <div class="item"> <input type="checkbox" class="add-me meat" value="ChickenBreast"> Chicken Breast
                 </div>
-                <div class="item"> <input type="checkbox" class="meat" value="ChickenThighs"> Chicken Thighs
+                <div class="item"> <input type="checkbox" class="add-me meat" value="ChickenThighs"> Chicken Thighs
                 </div>
-                <div class="item"> <input type="checkbox" class="meat" value="ChickenWings"> Chicken Wings</div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="ChickenWings"> Chicken Wings</div>
                 <br>
-                <div class="item"> <input type="checkbox" class="meat" value="Cod"> Cod</div>
-                <div class="item"> <input type="checkbox" class="meat" value="GroundBeef"> Ground Beef </div>
-                <div class="item"> <input type="checkbox" class="meat" value="GroundTurkey"> Ground Turkey</div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="Cod"> Cod</div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="GroundBeef"> Ground Beef </div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="GroundTurkey"> Ground Turkey</div>
                 <br>
-                <div class="item"> <input type="checkbox" class="meat" value="Herring"> Herring </div>
-                <div class="item"> <input type="checkbox" class="meat" value="LambChops"> Lamb Chops</div>
-                <div class="item"> <input type="checkbox" class="meat" value="Mahi-Mahi"> Mahi-Mahi</div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="Herring"> Herring </div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="LambChops"> Lamb Chops</div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="Mahi-Mahi"> Mahi-Mahi</div>
             </div>
 
             <div class="col-lg-4">
-                <div class="item"> <input type="checkbox" class="meat" value="PorkChops"> Pork Chops</div>
-                <div class="item"> <input type="checkbox" class="meat" value="PorkTenderloin"> Pork Tenderloin</div>
-                <div class="item"> <input type="checkbox" class="meat" value="PotRoast"> Pot Roast</div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="PorkChops"> Pork Chops</div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="PorkTenderloin"> Pork Tenderloin
+                </div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="PotRoast"> Pot Roast</div>
                 <br>
-                <div class="item"> <input type="checkbox" class="meat" value="Salomon"> Salomon</div>
-                <div class="item"> <input type="checkbox" class="meat" value="Sausage"> Sausage</div>
-                <div class="item"> <input type="checkbox" class="meat" value="Steak"> Steak</div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="Salomon"> Salomon</div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="Sausage"> Sausage</div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="Steak"> Steak</div>
                 <br>
-                <div class="item"> <input type="checkbox" class="meat" value="Tilapia"> Tilapia</div>
-                <div class="item"> <input type="checkbox" class="meat" value="Trout"> Trout </div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="Tilapia"> Tilapia</div>
+                <div class="item"> <input type="checkbox" class="add-me meat" value="Trout"> Trout </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" id="recipe-card1">
+                    <div id="recipes-go-here1"></div>
+                    <br>
+                    <div id="cooking-time-goes-here1"></div>
+                    <div id="ingredients-go-here1"></div>
+                    <div id="pic-goes-here1"></div>
+                </div>
+
+                <div class="col-md-4" id="recipe-card2">
+                    <div id="recipe2-go-here2"></div>
+                    <br>
+                    <div id="cooking-time-goes-here2"></div>
+                    <div id="ingredients-go-here2"></div>
+                    <div id="pic-goes-here2"></div>
+                </div>
+
+                <div class="col-md-4" id="recipe-card3">
+                    <div id="recipes-go-here3"></div>
+                    <br>
+                    <div id="cooking-time-goes-here3"></div>
+                    <div id="ingredients-go-here3"></div>
+                    <div id="pic-goes-here3"></div>
+                </div>
+                <div class="col-md-4" id="recipe-card4">
+                    <div id="recipes-go-here4"></div>
+                    <br>
+                    <div id="cooking-time-goes-here4"></div>
+                    <div id="ingredients-go-here4"></div>
+                    <div id="pic-goes-here4"></div>
+                </div>
             </div>
         </div>
-        <input type="submit" class="add" value="Add Ingredients">
+
     </div>
 
-    
+
     <div class="row">
         <div class="col-lg-4">
             <div class="yourIngredients">
                 </form>
                 <h3>Your Ingredients:</h3>
-                <iframe name="result" style="height:200px;width:400px;"></iframe>
-                <input type="submit" class="prev" value="Previous">
-                <input type="submit" class="next" value="Next">
+                <div name="result" style="height:200px;width:600px;background-color: aliceblue"
+                    id="ingredient-list-result"></div>
+
             </div>
         </div>
     </div>
     <style>
+        .col-md-4 {
+            background-color: aliceblue;
+            margin: 1%;
+        }
+
         .add {
             -webkit-text-stroke: 1px black;
             color: rgb(61, 2, 55);
@@ -109,8 +140,9 @@
             background-color: aliceblue;
             border-style: solid;
         }
-        body{
-            background-color:white;
+
+        body {
+            background-color: white;
         }
 
         h1 {

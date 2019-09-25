@@ -6,24 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <!-- Adding link to our js file  -->
+    <script src="app.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
 </head>
 
 <body>
@@ -77,29 +72,35 @@
 
             <div class="col-lg-3">
 
-                <div class="item"> <input type="checkbox" class="vegetable" value="Pepper-Anaheim"> Pepper-Anaheim
+                <div class="item"> <input type="checkbox" class="add-me vegetable" value="Pepper-Anaheim">
+                    Pepper-Anaheim
                 </div>
-                <div class="item"> <input type="checkbox" class="vegetable" value="Pepper-Bell"> Pepper-Bell</div>
-                <div class="item"> <input type="checkbox" class="vegetable" value="Pepper-Habanero">Pepper-Habanero
+                <div class="item"> <input type="checkbox" class="add-me vegetable" value="Pepper-Bell"> Pepper-Bell
+                </div>
+                <div class="item"> <input type="checkbox" class="add-me vegetable"
+                        value="Pepper-Habanero">Pepper-Habanero
                 </div>
                 <br>
-                <div class="item"> <input type="checkbox" class="vegetable" value="Pepper-Jalapeno"> Pepper-Jalapeno
+                <div class="item"> <input type="checkbox" class="add-me vegetable" value="Pepper-Jalapeno">
+                    Pepper-Jalapeno
                 </div>
-                <div class="item"> <input type="checkbox" class="vegetable" value="Pepper-Poblano">Pepper-Poblano
+                <div class="item"> <input type="checkbox" class="add-me vegetable" value="Pepper-Poblano">Pepper-Poblano
                 </div>
-                <div class="item"> <input type="checkbox" class="vegetable" value="Potato-Red">Potato-Red </div>
+                <div class="item"> <input type="checkbox" class="add-me vegetable" value="Potato-Red">Potato-Red </div>
                 <br>
-                <div class="item"> <input type="checkbox" class="vegetable" value="Potato-Sweet"> Potato-Sweet</div>
-                <div class="item"> <input type="checkbox" class="vegetable" value="Potato-White"> Potato-White</div>
-                <div class="item"> <input type="checkbox" class="vegetable" value="Radishes">Radishes </div>
+                <div class="item"> <input type="checkbox" class="add-me vegetable" value="Potato-Sweet"> Potato-Sweet
+                </div>
+                <div class="item"> <input type="checkbox" class="add-me vegetable" value="Potato-White"> Potato-White
+                </div>
+                <div class="item"> <input type="checkbox" class="add-me vegetable" value="Radishes">Radishes </div>
                 <br>
-                <div class="item"><input type="checkbox" class="vegetable" value="Rosemary">Rosemary</div>
-                <div class="item"> <input type="checkbox" class="vegetable" value="Spinach"> Spinach</div>
-                <div class="item"> <input type="checkbox" class="vegetable" value="Squash"> Squash</div>
+                <div class="item"><input type="checkbox" class="add-me vegetable" value="Rosemary">Rosemary</div>
+                <div class="item"> <input type="checkbox" class="add-me vegetable" value="Spinach"> Spinach</div>
+                <div class="item"> <input type="checkbox" class="add-me vegetable" value="Squash"> Squash</div>
                 <br>
-                <div class="item"> <input type="checkbox" class="vegetable" value="Thyme"> Thyme</div>
-                <div class="item"> <input type="checkbox" class="vegetable" value="Tomato">Tomato </div>
-                <div class="item"> <input type="checkbox" class="vegetable" value="Zucchini"> Zucchini </div>
+                <div class="item"> <input type="checkbox" class="add-me vegetable" value="Thyme"> Thyme</div>
+                <div class="item"> <input type="checkbox" class="add-me vegetable" value="Tomato">Tomato </div>
+                <div class="item"> <input type="checkbox" class="add-me vegetable" value="Zucchini"> Zucchini </div>
             </div>
 
 
@@ -107,14 +108,51 @@
                 <div class="yourIngredients">
                     </form>
                     <h3>Your Ingredients:</h3>
-                    <iframe name="result" style="height:200px;width:400px;"></iframe>
-                    <input type="submit" class="prev" value="Previous">
-                    <input type="submit" class="next" value="Next">
+                    <div name="result" style="height:200px;width:600px;background-color: aliceblue"
+                        id="ingredient-list-result"></div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4" id="recipe-card1">
+                        <div id="recipes-go-here1"></div>
+                        <br>
+                        <div id="cooking-time-goes-here1"></div>
+                        <div id="ingredients-go-here1"></div>
+                        <div id="pic-goes-here1"></div>
+                    </div>
+
+                    <div class="col-md-4" id="recipe-card2">
+                        <div id="recipe2-go-here2"></div>
+                        <br>
+                        <div id="cooking-time-goes-here2"></div>
+                        <div id="ingredients-go-here2"></div>
+                        <div id="pic-goes-here2"></div>
+                    </div>
+
+                    <div class="col-md-4" id="recipe-card3">
+                        <div id="recipes-go-here3"></div>
+                        <br>
+                        <div id="cooking-time-goes-here3"></div>
+                        <div id="ingredients-go-here3"></div>
+                        <div id="pic-goes-here3"></div>
+                    </div>
+                    <div class="col-md-4" id="recipe-card4">
+                        <div id="recipes-go-here4"></div>
+                        <br>
+                        <div id="cooking-time-goes-here4"></div>
+                        <div id="ingredients-go-here4"></div>
+                        <div id="pic-goes-here4"></div>
+                    </div>
                 </div>
             </div>
-            <input type="submit" class="add" value="Add Ingredients">
+
         </div>
         <style>
+            .col-md-4 {
+                background-color: aliceblue;
+                margin: 1%;
+            }
+
             .add {
                 -webkit-text-stroke: 1px black;
                 color: rgb(61, 2, 55);
