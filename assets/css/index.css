@@ -5,9 +5,7 @@
 }
 /*end of variables*/
 
-body, html{
-    height: 100%;
-}
+
 
 /*jumbotron*/
 .jumbotron{
@@ -28,15 +26,7 @@ nav{
 
 /*end of navbar*/
 /*view*/
-#view{
-    background-image: url("../img/defult_1.jpg");
-    height:75%;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width:100%;
-}
+
 
 .view .row_up{
     height: 100%;
