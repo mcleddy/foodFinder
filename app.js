@@ -1,4 +1,5 @@
 
+
     var ingredients = [""];
 
     for (var i = 0; i < ingredients.length; i++) {
@@ -57,6 +58,7 @@
             });
 
     });
+
 $(document).ready(function () {
     // VARIABLES //
     // Array that should hold all our checklist items
