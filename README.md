@@ -1,28 +1,14 @@
-# foodFinder
+# FoodFinder
+
+## Deployed Application
 link: https://mcleddy.github.io/foodFinder/
 
-Recipe Site
 
-Functions:
-Lists recipes
-User can add parameters such as ingredients needed, time to prepare, meal type
+## Purpose and Function
+This application targets busy people who want to cook without having to run to the store to get new ingredients. This will decrease food waste, simplifies the cooking process, and introduces users to new recipes.
 
+The user can either fillout a form of prelisted ingredients or type in their ingredients. The application will then generate six recipe cards that utilize these ingredients. The card lists the name of the recipe, the ingredients needed, and the cook time so that the user can determine what they are able to make without any unnecessary scolling or blog-reading. Once the user chooses their recipe they simply click on the link to the recipe page.  
 
-
-
-Minimum Viable Product:
-Target audience: 
-	Busy people who don’t want to constantly go to the store
-
-Problem the product will address:
-	Using ingredients the user already has
-
-
-Primary goal:
-Recipes for common items in fridge, genuinely useful
-
-
-ID and prioritize user stories:
-	I want to input a list of ingredients and have several recipes brought up
-
+## Languages / Frameworks Utilized
+This application utilizes javascript, ajax, and CSS.
 
